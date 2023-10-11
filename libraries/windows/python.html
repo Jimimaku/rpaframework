@@ -48,11 +48,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +65,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
@@ -96,12 +102,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
@@ -132,7 +140,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Windows</a></li>
       <li class="breadcrumb-item active">Python API</li>
       <li class="wy-breadcrumbs-aside">
@@ -169,10 +177,10 @@ below example library can be also installed separately without <strong>rpaframew
 <p><strong>ControlType</strong> is a value referred to by locator keys <cite>type:</cite> or <cite>control</cite>. Represents type of application
 object, which can be e.g. <cite>Window</cite>, <cite>Button</cite> or <cite>ListItem</cite>.</p>
 <p><strong>Element</strong> is an entity of an application structure (e.g. certain button in a window), which can be
-identified by a locator.</p>
-<p><strong>WindowsElement</strong> is an library container object for the <code class="docutils literal notranslate"><span class="pre">Element</span></code>. All keywords returning element, return
-element as <code class="docutils literal notranslate"><span class="pre">WindowsElement</span></code> and all keywords taking in <code class="docutils literal notranslate"><span class="pre">locator</span></code> or <code class="docutils literal notranslate"><span class="pre">root_element</span></code> arguments accept
-<code class="docutils literal notranslate"><span class="pre">WindowsElement</span></code> as an argument value.</p>
+identified by a locator. (also referred as <strong>Control</strong>)</p>
+<p><strong>WindowsElement</strong> is an library container object for the <code class="docutils literal notranslate"><span class="pre">Element</span></code>. All the keywords returning elements, will in
+fact return <code class="docutils literal notranslate"><span class="pre">WindowsElement``s.</span> <span class="pre">The</span> <span class="pre">ones</span> <span class="pre">accepting</span> <span class="pre">``locator</span></code> or <code class="docutils literal notranslate"><span class="pre">root_element</span></code> as arguments, will accept
+<code class="docutils literal notranslate"><span class="pre">WindowsElement</span></code> as an argument value. (<code class="docutils literal notranslate"><span class="pre">locator</span></code> accepts strings as well)</p>
 <p>Structure of the <code class="docutils literal notranslate"><span class="pre">WindowsElement</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">WindowsElement</span><span class="p">:</span>
     <span class="n">item</span><span class="p">:</span> <span class="n">Control</span>        <span class="c1"># ``item`` contains object instance of the element</span>
@@ -260,13 +268,28 @@ element as <code class="docutils literal notranslate"><span class="pre">WindowsE
 <tr class="row-even"><td><p>depth</p></td>
 <td><p>searchDepth (int) for finding Control (default 8)</p></td>
 </tr>
+<tr class="row-odd"><td><p>path</p></td>
+<td><p>target element by its index-based path traversal (e.g. <cite>path:2|3|8|2</cite>)</p></td>
+</tr>
 </tbody>
 </table>
 <p><strong>About root element on locators</strong></p>
 <p>Locators work on currently active <cite>root element</cite>. At the start <cite>root element</cite> is the whole
 desktop. There are different ways on changing this root element.</p>
 <p>Keyword <code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Window</span></code> is the most common method of setting certain system window
-as a root element for further actions using locators.</p>
+as a root element for further actions using locators. In the absence of a provided
+<cite>root_element</cite> parameter, here’s how you can control the default root element
+resolving:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">Anchor</span></code>: Sets the active anchor window from which the search begins.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Window</span></code>: Controls and focuses on a window and marks it as the current
+active window, from which all the subsequent searches will start from in the
+absence of a set anchor.</p></li>
+<li><p>If there’s no set anchor nor active window, then the last resort will be the
+“Desktop” element itself.</p></li>
+</ul>
+</div></blockquote>
 <p>Locators themselves support cascading syntax (denoted by character <cite>&gt;</cite> in the locator string),
 which can denote root element in “parent (root) &amp; child” terms.</p>
 <p>For example.</p>
@@ -303,6 +326,17 @@ Windows locators) support will be added in the future.</p>
 can’t be found. To fix this it is recommended to set root element which can be found within 8 levels OR
 defining <cite>depth</cite> in the locator string to a bigger value, e.g. <cite>id:deeplyNestedButton depth:16</cite>. Useful
 keywords for setting root element are <code class="docutils literal notranslate"><span class="pre">Control</span> <span class="pre">Window</span></code>, <code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">Anchor</span></code> and <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">Element</span></code>.</p>
+<p><strong>About the path strategy</strong></p>
+<p>When automation IDs and names aren’t enough (or not reliable), then you can fallback
+to the positions of elements in a tree. This can be achieved using the <cite>path:</cite>
+strategy to specify a list of element positions which indicates how to traverse the
+tree from parent to child beginning with the resolved root.</p>
+<p>Example: <cite>Calculator &gt; path:2|3|2|8|2</cite> - this locator looks for the “Calculator”
+window, then it looks for the 2nd direct child and then it looks for the 3rd one of
+the previous child and so on until it consumes the path completely. (indexes start
+with <cite>1</cite>)</p>
+<p>An alternative way to get the whole tree to explore it yourself would be to use the
+<code class="docutils literal notranslate"><span class="pre">Print</span> <span class="pre">Tree</span></code> keyword.</p>
 <p><strong>Keyboard and mouse</strong></p>
 <p>Keys for the keyboard actions are given using <code class="docutils literal notranslate"><span class="pre">uiautomation</span></code> specification.</p>
 <p>Special keys which are given within <cite>{}</cite> syntax.</p>
@@ -791,72 +825,97 @@ down before they are all released up.</p>
 <p>Most common, and recommended by Microsoft, inspector tool for Windows is <a class="reference external" href="https://accessibilityinsights.io/">Accessibility Insights</a> that
 can be installed separately. Other options are tools <a class="reference external" href="https://docs.microsoft.com/en-us/windows/win32/winauto/inspect-objects">Inspect Object</a>  and <a class="reference external" href="https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-verify">UI Automation Verify</a>, which
 can be accessed by installing Windows SDK.</p>
-<p>A more programmatic approach is to run <cite>Print Tree    log_as_warnings=${True}</cite>
+<p>A more programmatic approach is to run <code class="docutils literal notranslate"><span class="pre">Print</span> <span class="pre">Tree</span>&#160;&#160;&#160; <span class="pre">log_as_warnings=${True}</span></code>
 keyword and then observe in the logs the found elements structure starting from
-Desktop as root. (refer to keyword’s documentation for more details)</p>
+Desktop (or the currently set anchor / active window) as root. (refer to keyword’s
+<a class="reference external" href="https://robocorp.com/docs/libraries/rpa-framework/rpa-windows/keywords#print-tree">documentation</a>
+for more details)</p>
 <p><strong>Recording</strong></p>
-<p>The package provides some rudimentary inspecting and recording via script <code class="docutils literal notranslate"><span class="pre">windows-record</span></code>, which can
-be started in the command line (in a environment containing <code class="docutils literal notranslate"><span class="pre">rpaframework-windows</span></code> installation).</p>
-<p>Recording inspects elements on <strong>mouse click</strong> and can be stopped with keyboard <strong>ESC</strong>.
-Expected console output.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\U</span>sers<span class="se">\U</span>ser<span class="se">\r</span>obots<span class="se">\&gt;</span>windows-record<span class="w">  </span><span class="c1"># or &gt;python -m RPA.Windows</span>
-keyboard<span class="w"> </span>and<span class="w"> </span>mouse<span class="w"> </span>listeners<span class="w"> </span>started
+<p>The package provides some rudimentary inspecting and recording via the
+<code class="docutils literal notranslate"><span class="pre">windows-record</span></code> script, which can be started through the command line (in an
+environment containing the <code class="docutils literal notranslate"><span class="pre">rpaframework-windows</span></code> installation).</p>
+<p>Recording inspects elements on <strong>mouse click</strong> and can be stopped by pressing the
+<strong>ESC</strong> key. Expected console output:</p>
+<div class="highlight-winbatch notranslate"><div class="highlight"><pre><span></span>C<span class="p">:</span><span class="nl">\Users\User\robots\</span><span class="c1">&gt; windows-record -v  # or &gt; python -m RPA.Windows -v</span>
+Mouse recording started. Use ESC to stop recording.
 
 --------------------------------------------------------------------------------
-COPY<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>PASTE<span class="w"> </span>BELOW<span class="w"> </span>CODE<span class="w"> </span>INTO<span class="w"> </span>***<span class="w"> </span>Tasks<span class="w"> </span>***<span class="w"> </span>or<span class="w"> </span>***<span class="w"> </span>Keywords<span class="w"> </span>***
+Copy-paste the code below into your `*** Tasks ***` or `*** Keywords ***`
 --------------------------------------------------------------------------------
 
-Control<span class="w"> </span>Window<span class="w">    </span>Taskbar<span class="w">  </span><span class="c1"># Handle: 131380</span>
-Click<span class="w">   </span>name:<span class="s2">&quot;Type here to search&quot;</span>
-Control<span class="w"> </span>Window<span class="w">    </span>Calculator<span class="w">  </span><span class="c1"># Handle: 3411840</span>
-Click<span class="w">   </span>name:Five
-Click<span class="w">   </span>name:Eight
-Click<span class="w">   </span>name:Five
+Control Window    name:Calculator and type:WindowControl and class:ApplicationFrameWindow  # handle:9569486
+Click    name:Calculator and id:TitleBar and type:WindowControl and class:ApplicationFrameTitleBarWindow and path:1
+Click    name:<span class="s2">&quot;Display is 0&quot;</span> and id:CalculatorResults and type:TextControl and path:2<span class="p">|</span>3<span class="p">|</span>2<span class="p">|</span>2
+Click    name:Eight and id:num8Button and type:ButtonControl and class:Button and path:2<span class="p">|</span>3<span class="p">|</span>2<span class="p">|</span>8<span class="p">|</span>9
+Click    name:Nine and id:num9Button and type:ButtonControl and class:Button and path:2<span class="p">|</span>3<span class="p">|</span>2<span class="p">|</span>8<span class="p">|</span>10
+Click    name:Clear and id:clearButton and type:ButtonControl and class:Button and path:2<span class="p">|</span>3<span class="p">|</span>2<span class="p">|</span>5<span class="p">|</span>3
 
 --------------------------------------------------------------------------------
 </pre></div>
 </div>
-<p><strong>Examples</strong></p>
-<p>Both Robot Framework and Python examples follow.</p>
+<p>Check our Portal example in order to learn more abot the <cite>path:</cite> strategy in
+locators and how to record elements displaying their paths:
+<a class="reference external" href="https://robocorp.com/portal/robot/robocorp/example-windows-element-path">https://robocorp.com/portal/robot/robocorp/example-windows-element-path</a></p>
+<p>Video recorded demo on how to run the recorder script from VSCode:
+<a class="reference external" href="https://www.loom.com/share/2807372359f34b9cbe1bc2df9194ec68">https://www.loom.com/share/2807372359f34b9cbe1bc2df9194ec68</a></p>
+<p><strong>Caveats</strong></p>
+<ul class="simple">
+<li><p>Make sure your <em>display scaling</em> is set to <em>100%</em>, otherwise you might encounter
+issues when clicking or interacting with elements. (since offsets and coordinates
+get distorted)</p></li>
+<li><p>Disturbing the automation (like interacting with your mouse/keyboard) or having
+other apps obstructing the process interacting with your app of interest will
+most probably affect the expected behaviour. In order to avoid this, try
+controlling the app’s main window right before sending clicks or keys. And keep
+targeting elements through <strong>string locators</strong>, as interacting with Windows
+element objects previously retrieved will not work as expected in a future
+altered state of the app (changes under the element structure).</p></li>
+</ul>
+<p><strong>Example: Robot Framework</strong></p>
 <p>The library must be imported first.</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
 <span class="kn">Library</span><span class="p">    </span><span class="nn">RPA.Windows</span>
 </pre></div>
 </div>
-<p>Windows Calculator task</p>
+<p>Windows Calculator automation task</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Tasks ***</span>
 <span class="gu">Do some calculations</span>
 <span class="p">    [</span><span class="kn">Setup</span><span class="p">]  </span><span class="nf">Windows Run</span><span class="p">   </span><span class="s">calc.exe</span>
+
 <span class="p">    </span><span class="nf">Control Window</span><span class="p">    </span><span class="s">name:Calculator</span>
 <span class="p">    </span><span class="nf">Click</span><span class="p">    </span><span class="s">id:clearButton</span>
 <span class="p">    </span><span class="nf">Send Keys</span><span class="p">   </span><span class="s">keys=96+4=</span>
-<span class="p">    ${</span><span class="nv">result</span><span class="p">}=    </span><span class="nf">Get Attribute</span><span class="p">    </span><span class="s">id:CalculatorResults</span><span class="p">    </span><span class="s">Name</span>
+<span class="p">    ${</span><span class="nv">result</span><span class="p">} =    </span><span class="nf">Get Attribute</span><span class="p">    </span><span class="s">id:CalculatorResults</span><span class="p">    </span><span class="s">Name</span>
 <span class="p">    </span><span class="nf">Log To Console</span><span class="p">    ${</span><span class="nv">result</span><span class="p">}</span>
-<span class="p">    ${</span><span class="nv">buttons</span><span class="p">}=  </span><span class="nf">Get Elements</span><span class="p">  </span><span class="s">type:Group and name:&quot;Number pad&quot; &gt; type:Button</span>
+
+<span class="p">    @{</span><span class="nv">buttons</span><span class="p">} =  </span><span class="nf">Get Elements</span><span class="p">  </span><span class="s">type:Group and name:&quot;Number pad&quot; &gt; type:Button</span>
 <span class="p">    FOR  ${</span><span class="nv">button</span><span class="p">}  IN  @{</span><span class="nv">buttons</span><span class="p">}</span>
 <span class="p">        </span><span class="nf">Log To Console</span><span class="p">   ${</span><span class="nv">button</span><span class="p">}</span>
 <span class="p">    END</span>
+
 <span class="p">    [</span><span class="kn">Teardown</span><span class="p">]   </span><span class="nf">Close Current Window</span>
 </pre></div>
 </div>
-<p>Python example</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">from RPA.Windows import Windows</span>
+<p><strong>Example: Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.Windows</span> <span class="kn">import</span> <span class="n">Windows</span>
 
-<span class="c">library = Windows()</span>
+<span class="n">library</span> <span class="o">=</span> <span class="n">Windows</span><span class="p">()</span>
 
-<span class="c">def test_do_some_calculations():</span>
-<span class="p">    </span><span class="c">try:</span>
-<span class="p">        </span><span class="c">library.windows_run(&quot;calc.exe&quot;)</span>
-<span class="p">        </span><span class="c">library.control_window(&quot;name:Calculator&quot;)</span>
-<span class="p">        </span><span class="c">library.click(&quot;id:clearButton&quot;)</span>
-<span class="p">        </span><span class="c">library.send_keys(keys=&quot;96+4=&quot;)</span>
-<span class="p">        </span><span class="c">result = library.get_attribute(&quot;id:CalculatorResults&quot;, &quot;Name&quot;)</span>
-<span class="p">        </span><span class="c">print(result)</span>
-<span class="p">        </span><span class="c">buttons = library.get_elements(&#39;type:Group and name:&quot;Number pad&quot; &gt; type:Button&#39;)</span>
-<span class="p">        </span><span class="c">for button in buttons:</span>
-<span class="p">            </span><span class="c">print(button)</span>
-<span class="p">    </span><span class="c">finally:</span>
-<span class="p">        </span><span class="c">library.close_current_window()</span>
+<span class="k">def</span> <span class="nf">test_do_some_calculations</span><span class="p">():</span>
+    <span class="n">library</span><span class="o">.</span><span class="n">windows_run</span><span class="p">(</span><span class="s2">&quot;calc.exe&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">library</span><span class="o">.</span><span class="n">control_window</span><span class="p">(</span><span class="s2">&quot;name:Calculator&quot;</span><span class="p">)</span>
+        <span class="n">library</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s2">&quot;id:clearButton&quot;</span><span class="p">)</span>
+        <span class="n">library</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="s2">&quot;96+4=&quot;</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">library</span><span class="o">.</span><span class="n">get_attribute</span><span class="p">(</span><span class="s2">&quot;id:CalculatorResults&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="n">buttons</span> <span class="o">=</span> <span class="n">library</span><span class="o">.</span><span class="n">get_elements</span><span class="p">(</span>
+            <span class="s1">&#39;type:Group and name:&quot;Number pad&quot; &gt; type:Button&#39;</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">button</span> <span class="ow">in</span> <span class="n">buttons</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">library</span><span class="o">.</span><span class="n">close_current_window</span><span class="p">()</span>
 </pre></div>
 </div>
 <dl class="py attribute">
@@ -963,7 +1022,7 @@ Click<span class="w">   </span>name:Five
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

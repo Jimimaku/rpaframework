@@ -48,11 +48,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +65,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
@@ -99,12 +105,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
@@ -132,7 +140,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">FileSystem</a></li>
       <li class="breadcrumb-item active">Python API</li>
       <li class="wy-breadcrumbs-aside">
@@ -314,7 +322,7 @@ which are more RPA-oriented.</p>
 <dt class="sig sig-object py" id="RPA.FileSystem.FileSystem.append_to_binary_file">
 <span class="sig-name descname"><span class="pre">append_to_binary_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.FileSystem.FileSystem.append_to_binary_file" title="Permalink to this definition"></a></dt>
 <dd><p>Appends binary content to the given file.</p>
-<p>See `Create Binary File` for usage example.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Binary</span> <span class="pre">File</span></code> for usage example.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -329,7 +337,7 @@ which are more RPA-oriented.</p>
 <dt class="sig sig-object py" id="RPA.FileSystem.FileSystem.append_to_file">
 <span class="sig-name descname"><span class="pre">append_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.FileSystem.FileSystem.append_to_file" title="Permalink to this definition"></a></dt>
 <dd><p>Appends text to the given file.</p>
-<p>See `Create File` for usage example.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">File</span></code> for usage example.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -388,7 +396,7 @@ extension can be removed by passing an empty string.</p>
 <dt class="sig sig-object py" id="RPA.FileSystem.FileSystem.copy_file">
 <span class="sig-name descname"><span class="pre">copy_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.FileSystem.FileSystem.copy_file" title="Permalink to this definition"></a></dt>
 <dd><p>Copy a file from source path to destination path.</p>
-<p>See `Is Directory Empty` for usage example.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">Is</span> <span class="pre">Directory</span> <span class="pre">Empty</span></code> for usage example.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -494,7 +502,7 @@ exists (default <code class="docutils literal notranslate"><span class="pre">Fal
 <dt class="sig sig-object py" id="RPA.FileSystem.FileSystem.does_directory_exist">
 <span class="sig-name descname"><span class="pre">does_directory_exist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#RPA.FileSystem.FileSystem.does_directory_exist" title="Permalink to this definition"></a></dt>
 <dd><p>Returns True if the given directory exists, False if not.</p>
-<p>See `Does Directory Not Exist` for usage example.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">Does</span> <span class="pre">Directory</span> <span class="pre">Not</span> <span class="pre">Exist</span></code> for usage example.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>path</strong> – path to inspected directory</p>
@@ -554,7 +562,7 @@ exists (default <code class="docutils literal notranslate"><span class="pre">Fal
 <dt class="sig sig-object py" id="RPA.FileSystem.FileSystem.does_file_not_exist">
 <span class="sig-name descname"><span class="pre">does_file_not_exist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#RPA.FileSystem.FileSystem.does_file_not_exist" title="Permalink to this definition"></a></dt>
 <dd><p>Returns True if the file does not exist, False if it does.</p>
-<p>See `Does File Exist` for usage example.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">Does</span> <span class="pre">File</span> <span class="pre">Exist</span></code> for usage example.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>path</strong> – path to inspected file</p>
@@ -736,7 +744,7 @@ Note: Linux sets this whenever file metadata changes</p>
 <dt class="sig sig-object py" id="RPA.FileSystem.FileSystem.is_directory_not_empty">
 <span class="sig-name descname"><span class="pre">is_directory_not_empty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#RPA.FileSystem.FileSystem.is_directory_not_empty" title="Permalink to this definition"></a></dt>
 <dd><p>Returns True if the given directory has any files or subdirectories.</p>
-<p>See `Is Directory Empty` for usage example.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">Is</span> <span class="pre">Directory</span> <span class="pre">Empty</span></code> for usage example.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>path</strong> – path to inspected directory</p>
@@ -985,7 +993,7 @@ Does not attempt to decode the content in any way.</p>
 <dt class="sig sig-object py" id="RPA.FileSystem.FileSystem.read_file">
 <span class="sig-name descname"><span class="pre">read_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Path</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#RPA.FileSystem.FileSystem.read_file" title="Permalink to this definition"></a></dt>
 <dd><p>Reads a file as text, with given <cite>encoding</cite>, and returns the content.”</p>
-<p>See `Find Files` for usage example.</p>
+<p>See <code class="docutils literal notranslate"><span class="pre">Find</span> <span class="pre">Files</span></code> for usage example.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1225,7 +1233,7 @@ set self.__traceback__ to tb and return self.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

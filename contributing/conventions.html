@@ -48,11 +48,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +65,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/cloud_google/index.html">Cloud.Google</a></li>
@@ -96,12 +102,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../libraries/outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/robotloglistener/index.html">RobotLogListener</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/salesforce/index.html">Salesforce</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/twitter/index.html">Twitter</a></li>
@@ -129,7 +137,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Project conventions</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/contributing/conventions.rst.txt" rel="nofollow"> View page source</a>
@@ -168,10 +176,6 @@ by other users. They will be contained in Robocorp’s Github organization.</p>
 Packages should be reserved according to the <a class="reference internal" href="#naming">Naming</a> policy. Packages should
 also include the correct <a class="reference external" href="https://pypi.org/classifiers/">trove classifiers</a>
 to make finding them easier.</p>
-<p>Deprecated: For Robocode Lab usage, the packages should be installable via Conda. This
-can be handled in either pip interop mode (in Conda) or by releasing
-into completely new packages into a Conda channel. The maintenance burden for
-the latter can be eased by having a separate Robocorp channel.</p>
 </div>
 <div class="section" id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading"></a></h2>
@@ -182,14 +186,17 @@ API documentation and (simple) usage instructions.</p>
 Both Python and Robot Framework API documentation will be autogenerated from
 source files. The primary docstring format for libraries is reStructuredText.</p>
 <p>The documentation will also include examples usages for both Python
-and Robot Framework. In-depth guides will be available separately in Robohub.</p>
+and Robot Framework. In-depth guides will be available separately in the
+<a class="reference external" href="https://robocorp.com/portal">Portal</a>.</p>
 <p>Creating documentation will be the responsibility of the library developer.</p>
 </div>
 <div class="section" id="code-formatting">
 <h2>Code Formatting<a class="headerlink" href="#code-formatting" title="Permalink to this heading"></a></h2>
 <p>All Python code should be automatically formatted using the
 <a class="reference external" href="https://github.com/psf/black">Black</a> tool. For convention issues which are
-not strictly formatting, <a class="reference external" href="https://github.com/PyCQA/flake8">flake8</a> is used.</p>
+not strictly formatting, <a class="reference external" href="https://github.com/PyCQA/flake8">flake8</a> is used. On top of
+this, we use <a class="reference external" href="https://github.com/PyCQA/pylint">Pylint</a> and even
+<a class="reference external" href="https://pycqa.github.io/isort/">isort</a> or <a class="reference external" href="https://www.mypy-lang.org/">mypy</a>.</p>
 <p>These conventions should be validated for all pull requests. The project should
 probably offer a pre-commit hook which checks them automatically.</p>
 <p>Reasons why auto-formatting is a good idea, from a similar Javascript tool:
@@ -225,9 +232,9 @@ best tooling option is Github Actions.</p>
 <li><p>Python versions:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Python 3.6</p></li>
-<li><p>Python 3.7</p></li>
 <li><p>Python 3.8</p></li>
+<li><p>Python 3.9</p></li>
+<li><p>Python 3.10</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -236,7 +243,7 @@ best tooling option is Github Actions.</p>
 <div class="section" id="change-log">
 <h2>Change Log<a class="headerlink" href="#change-log" title="Permalink to this heading"></a></h2>
 <p>All packages should keep track of changes. This includes all additions,
-removals, changes, bug fixes, etc. that affect users. All created releases
+removals, changes, bug fixes etc. that affect users. All created releases
 should contain a change log entry.</p>
 <p>Change logs are meant to be human-readable and generating them from git log
 entries is not an acceptable method. The process can be entirely manual or
@@ -267,13 +274,6 @@ be validated with a tool such as <code class="docutils literal notranslate"><spa
 The RPA Framework project aims to support versions 3.6 and newer, but
 if required, the hinting features are available through a backport package.</p>
 </div>
-</div>
-<div class="section" id="ipython-notebook-support">
-<h3>IPython / Notebook support<a class="headerlink" href="#ipython-notebook-support" title="Permalink to this heading"></a></h3>
-<p>Deprecated: Robocode Lab is based on the IPython / Jupyter Notebook project, which
-allows libraries to visualize output and create interactive widgets. This is an
-integral part of the exploratory RPA workflow, and should be taken into account
-while developing libraries.</p>
 </div>
 </div>
 </div>
@@ -322,7 +322,7 @@ while developing libraries.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -48,11 +48,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +65,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
@@ -99,12 +105,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
@@ -132,7 +140,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">JSON</a></li>
       <li class="breadcrumb-item active">Python API</li>
       <li class="wy-breadcrumbs-aside">
@@ -345,7 +353,7 @@ value like <code class="docutils literal notranslate"><span class="pre">horror,y
 for each book by using the <code class="docutils literal notranslate"><span class="pre">split</span></code> function like so:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
 <span class="gu">Get genres</span>
-<span class="p">    ${</span><span class="nv">genres</span><span class="p">}=  </span><span class="nf">Get values from JSON</span><span class="p">    </span><span class="s">$.books[*].genres.`split(,, 0, -1)`</span>
+<span class="p">    ${</span><span class="nv">genres</span><span class="p">}=  </span><span class="nf">Get values from JSON</span><span class="p">    </span><span class="s">$.books[*].genres.```split(,, 0, -1)```</span>
 </pre></div>
 </div>
 <p>Each functions parameters are defined here:</p>
@@ -388,7 +396,7 @@ or perform arithmetic functions on numerical values. Each JSONPath
 expression used must return the same type, and when performing
 such functions between returned lists, each list must be the same
 length. An example is included in documentation for the keyword
-`Get values from JSON`.</p>
+<code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">values</span> <span class="pre">from</span> <span class="pre">JSON</span></code>.</p>
 </div>
 <div class="section" id="additional-information">
 <h5>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this heading"></a></h5>
@@ -687,7 +695,7 @@ were no matches.</p>
 <span class="p">    </span><span class="c"># Arithmetic operations only work when lists are of equal lengths and types.</span>
 <span class="p">    ${</span><span class="nv">prices</span><span class="p">}=    </span><span class="nf">Get values from json</span>
 <span class="p">    ...    ${</span><span class="nv">JSON_DOC</span><span class="p">}</span>
-<span class="p">    ...    </span><span class="s">$.clients[*].orders[*].id + &quot; has price &quot; + $.clients[*].orders[*].price.`str()`</span>
+<span class="p">    ...    </span><span class="s">$.clients[*].orders[*].id + &quot; has price &quot; + $.clients[*].orders[*].price.```str()```</span>
 <span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">\nOUTPUT IS\n </span><span class="p">${</span><span class="nv">prices</span><span class="p">}    </span><span class="s">console=</span><span class="p">${</span><span class="nv">True</span><span class="p">}</span>
 <span class="p">    </span><span class="nf">Should be equal as strings</span><span class="p">    ${</span><span class="nv">prices</span><span class="p">}</span>
 <span class="p">    ...    </span><span class="s">[&#39;guid-001 has price 103.2&#39;, &#39;guid-002 has price 98.99&#39;, &#39;guid-003 has price 22.0&#39;, &#39;guid-004 has price 2330.01&#39;, &#39;guid-005 has price 152.12&#39;]</span>
@@ -1235,7 +1243,7 @@ if the specified path exists.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

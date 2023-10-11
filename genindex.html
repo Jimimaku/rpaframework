@@ -46,11 +46,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -59,9 +63,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="libraries/archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/cloud_google/index.html">Cloud.Google</a></li>
@@ -94,12 +100,14 @@
 <li class="toctree-l1"><a class="reference internal" href="libraries/outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/robotloglistener/index.html">RobotLogListener</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/salesforce/index.html">Salesforce</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/twitter/index.html">Twitter</a></li>
@@ -127,7 +135,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Index</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -173,14 +181,22 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.abort">abort() (RPA.FTP.FTP method)</a>
+
+      <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.abort">(RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
+      </ul></li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.absolute_path">absolute_path() (RPA.FileSystem.FileSystem method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.accept_insecure_certs">accept_insecure_certs (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds.access_token">access_token (RPA.Email.Exchange.OAuth2Creds property)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.AccessType">AccessType (class in RPA.Email.Exchange)</a>
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.account">account (RPA.Salesforce.Salesforce attribute)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.acct">acct() (RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.Action">Action (class in RPA.Email.ImapSmtp)</a>
 </li>
@@ -190,7 +206,7 @@
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.active">(RPA.Excel.Files.XlsxWorkbook property)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.adapter">adapter (RPA.Robocorp.Vault.Vault property)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Vault.adapter">adapter (RPA.Robocorp.Vault.Vault property)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.adapter">[1]</a>
 
       <ul>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItem.adapter">(RPA.Robocorp.WorkItems.WorkItem attribute)</a>
@@ -198,6 +214,14 @@
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.adapter">(RPA.Robocorp.WorkItems.WorkItems property)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.add_argument">add_argument() (RPA.Browser.Selenium.FirefoxOptions method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.add_column">add_column() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.add_columns">add_columns() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.add_custom_holidays">add_custom_holidays() (RPA.Calendar.Calendar method)</a>
+</li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.BaseAdapter.add_file">add_file() (RPA.Robocorp.WorkItems.BaseAdapter method)</a>
 
       <ul>
@@ -232,6 +256,8 @@
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.add_product_into_opportunity">add_product_into_opportunity() (RPA.Salesforce.Salesforce method)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.add_rows">add_rows() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.add_table_column">add_table_column() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.add_table_row">add_table_row() (RPA.Tables.Tables method)</a>
@@ -250,6 +276,24 @@
 
       <ul>
         <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.analyze_document">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.ancestry">ancestry (RPA.JavaAccessBridge.JavaElement attribute)</a>
+</li>
+      <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.Application.app">app (RPA.Excel.Application.Application property)</a>
+
+      <ul>
+        <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.app">(RPA.Outlook.Application.Application property)</a>
+</li>
+        <li><a href="libraries/word_application/python.html#RPA.Word.Application.Application.app">(RPA.Word.Application.Application property)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.Application.APP_DISPATCH">APP_DISPATCH (RPA.Excel.Application.Application attribute)</a>
+
+      <ul>
+        <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.APP_DISPATCH">(RPA.Outlook.Application.Application attribute)</a>
+</li>
+        <li><a href="libraries/word_application/python.html#RPA.Word.Application.Application.APP_DISPATCH">(RPA.Word.Application.Application attribute)</a>
 </li>
       </ul></li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.append_column">append_column() (RPA.Tables.Table method)</a>
@@ -290,6 +334,8 @@
 </li>
       <li><a href="libraries/archive/python.html#RPA.Archive.Archive.archive_folder_with_tar">archive_folder_with_tar() (RPA.Archive.Archive method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/archive/python.html#RPA.Archive.Archive.archive_folder_with_zip">archive_folder_with_zip() (RPA.Archive.Archive method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserNotFoundError.args">args (RPA.Browser.Selenium.BrowserNotFoundError attribute)</a>
@@ -304,8 +350,6 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.MenuItemNotFoundError.args">(RPA.Desktop.Windows.MenuItemNotFoundError attribute)</a>
 </li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.UnknownWindowsBackendError.args">(RPA.Desktop.Windows.UnknownWindowsBackendError attribute)</a>
-</li>
-        <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.NoRecipientsError.args">(RPA.Email.Exchange.NoRecipientsError attribute)</a>
 </li>
         <li><a href="libraries/filesystem/python.html#RPA.FileSystem.TimeoutException.args">(RPA.FileSystem.TimeoutException attribute)</a>
 </li>
@@ -347,7 +391,7 @@
 </li>
         <li><a href="libraries/netsuite/python.html#RPA.Netsuite.NetsuiteAuthenticationError.args">(RPA.Netsuite.NetsuiteAuthenticationError attribute)</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError.args">(RPA.Robocorp.Vault.RobocorpVaultError attribute)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVaultError.args">(RPA.Robocorp.Vault.RobocorpVaultError attribute)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError.args">[1]</a>
 </li>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.EmptyQueue.args">(RPA.Robocorp.WorkItems.EmptyQueue attribute)</a>
 </li>
@@ -357,13 +401,27 @@
 </li>
         <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDomainChangeError.args">(RPA.Salesforce.SalesforceDomainChangeError attribute)</a>
 </li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetAuthenticationError.args">(RPA.Smartsheet.SmartsheetAuthenticationError attribute)</a>
+</li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetError.args">(RPA.Smartsheet.SmartsheetError attribute)</a>
+</li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetNoSheetSelectedError.args">(RPA.Smartsheet.SmartsheetNoSheetSelectedError attribute)</a>
+</li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.assert_page_contains">assert_page_contains() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.arguments">arguments (RPA.Browser.Selenium.FirefoxOptions property)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.assert_page_not_contains">assert_page_not_contains() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.assert_page_contains">assert_page_contains() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.assert_page_contains">(RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
+      </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.assert_page_not_contains">assert_page_not_contains() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.assert_page_not_contains">(RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.assume_role">assume_role() (RPA.Cloud.AWS.AWS method)</a>
 
       <ul>
@@ -378,7 +436,11 @@
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceSpeech.audio_formats">audio_formats (RPA.Cloud.Azure.ServiceSpeech attribute)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.auth">auth() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.auth_with_api_key">auth_with_api_key() (RPA.Hubspot.Hubspot method)</a>
+</li>
+      <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.auth_with_connected_app">auth_with_connected_app() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.auth_with_token">auth_with_token() (RPA.Hubspot.Hubspot method)</a>
 
@@ -401,6 +463,10 @@
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.authorize_imap">authorize_imap() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.authorize_smtp">authorize_smtp() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
+</li>
+      <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI.authorize_to_azure_openai">authorize_to_azure_openai() (RPA.OpenAI.OpenAI method)</a>
+</li>
+      <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI.authorize_to_openai">authorize_to_openai() (RPA.OpenAI.OpenAI method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.auto_size_columns">auto_size_columns() (RPA.Excel.Files.Files method)</a>
 </li>
@@ -434,7 +500,7 @@
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.BaseAdapter">BaseAdapter (class in RPA.Robocorp.WorkItems)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.BaseSecretManager">BaseSecretManager (class in RPA.Robocorp.Vault)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.BaseSecretManager">BaseSecretManager (class in RPA.Robocorp.Vault)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.BaseSecretManager">[1]</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.BaseWorkbook">BaseWorkbook (class in RPA.Excel.Files)</a>
 </li>
@@ -444,8 +510,16 @@
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.BatchMode">BatchMode (class in RPA.Hubspot)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.binary">binary (RPA.Browser.Selenium.FirefoxOptions property)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.binary_location">binary_location (RPA.Browser.Selenium.FirefoxOptions property)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.BINARY_LOCATION_ERROR">BINARY_LOCATION_ERROR (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
+</li>
       <li><a href="libraries/images/python.html#RPA.Images.RGB.blue">blue (RPA.Images.RGB attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.BaseWorkbook.book">book (RPA.Excel.Files.BaseWorkbook property)</a>
 
       <ul>
@@ -454,8 +528,6 @@
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.book">(RPA.Excel.Files.XlsxWorkbook property)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.boot_time_in_seconds_from_epoch">boot_time_in_seconds_from_epoch() (RPA.Desktop.OperatingSystem.OperatingSystem method)</a>
 
       <ul>
@@ -466,7 +538,9 @@
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.BROWSER_NAMES">BROWSER_NAMES (RPA.Browser.Selenium.Selenium attribute)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride">BrowserManagementKeywordsOverride (class in RPA.Browser.Selenium)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.browser_version">browser_version (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords">BrowserManagementKeywords (class in RPA.Browser.Selenium)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserNotFoundError">BrowserNotFoundError</a>
 </li>
@@ -488,17 +562,19 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.calculate_rectangle_center">calculate_rectangle_center() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar">Calendar (class in RPA.Calendar)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.call_element_action">call_element_action() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Database.call_stored_procedure">call_stored_procedure() (RPA.Database.Database method)</a>
 </li>
-      <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.catch_com_error">catch_com_error() (in module RPA.Excel.Application)</a>
-
-      <ul>
-        <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.catch_com_error">(in module RPA.Outlook.Application)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.capabilities">capabilities (RPA.Browser.Selenium.FirefoxOptions property)</a>
 </li>
-      </ul></li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.ccc">ccc() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.change_file_extension">change_file_extension() (RPA.FileSystem.FileSystem method)</a>
+</li>
+      <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI.chat_completion_create">chat_completion_create() (RPA.OpenAI.OpenAI method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.check_token">check_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
 </li>
@@ -507,6 +583,8 @@
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.checked">checked (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.child">child() (RPA.JSON.RPAFilter method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.CHROMIUM_BROWSERS">CHROMIUM_BROWSERS (RPA.Browser.Selenium.Selenium attribute)</a>
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.chunks">chunks() (in module RPA.Images)</a>
 </li>
@@ -539,6 +617,8 @@
 </li>
       </ul></li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.click_element_if_visible">click_element_if_visible() (RPA.Browser.Selenium.Selenium method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.click_element_when_clickable">click_element_when_clickable() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.click_element_when_visible">click_element_when_visible() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
@@ -577,12 +657,14 @@
 </li>
         <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.close">(RPA.FTP.FTP method)</a>
 </li>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.close">(RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       </ul></li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.close_all_applications">close_all_applications() (RPA.Desktop.Windows.Windows method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.close_all_browsers">close_all_browsers() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.close_all_browsers">close_all_browsers() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.close_browser">close_browser() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.close_browser">close_browser() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.Application.close_document">close_document() (RPA.Excel.Application.Application method)</a>
 
@@ -593,6 +675,8 @@
 </li>
       </ul></li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.close_java_window">close_java_window() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.close_window">close_window() (RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.close_workbook">close_workbook() (RPA.Excel.Files.Files method)</a>
 </li>
@@ -606,6 +690,10 @@
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.columns">columns (RPA.Tables.Table property)</a>
 </li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.compare_times">compare_times() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI.completion_create">completion_create() (RPA.OpenAI.OpenAI method)</a>
+</li>
       <li><a href="libraries/database/python.html#RPA.Database.Configuration">Configuration (class in RPA.Database)</a>
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.ConfigurationType">ConfigurationType (class in RPA.Robocorp.Process)</a>
@@ -615,24 +703,32 @@
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.connect">connect() (RPA.FTP.FTP method)</a>
 
       <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.connect">(RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
         <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.connect">(RPA.Netsuite.Netsuite method)</a>
 </li>
       </ul></li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.connect_by_handle">connect_by_handle() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.connect_by_pid">connect_by_pid() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Database.connect_to_database">connect_to_database() (RPA.Database.Database method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.connect_to_existing_connection">connect_to_existing_connection() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.connect_to_session">connect_to_session() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/archive/python.html#RPA.Archive.convert_date">convert_date() (in module RPA.Archive)</a>
 </li>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.convert_eml_file_into_message">convert_eml_file_into_message() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
+</li>
       <li><a href="libraries/json/python.html#RPA.JSON.JSON.convert_json_to_string">convert_json_to_string() (RPA.JSON.JSON method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.convert_row_to_dict">convert_row_to_dict() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.convert_sheet_to_table">convert_sheet_to_table() (RPA.Smartsheet.Smartsheet method)</a>
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.JSON.convert_string_to_json">convert_string_to_json() (RPA.JSON.JSON method)</a>
 </li>
@@ -724,7 +820,7 @@
       </ul></li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.create_output_work_item">create_output_work_item() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.create_public_key_url">create_public_key_url() (RPA.Robocorp.Vault.RobocorpVault method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault.create_public_key_url">create_public_key_url() (RPA.Robocorp.Vault.RobocorpVault method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.create_public_key_url">[1]</a>
 </li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.create_queue">create_queue() (RPA.Cloud.AWS.AWS method)</a>
 
@@ -742,15 +838,19 @@
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.SearchLexer.create_search_object">create_search_object() (RPA.Hubspot.SearchLexer method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.create_secret_url">create_secret_url() (RPA.Robocorp.Vault.RobocorpVault method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault.create_secret_url">create_secret_url() (RPA.Robocorp.Vault.RobocorpVault method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.create_secret_url">[1]</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.create_session">create_session() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.create_sharepoint_list">create_sharepoint_list() (RPA.MSGraph.MSGraph method)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.create_sheet">create_sheet() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.create_table">create_table() (RPA.Tables.Tables method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.create_webdriver">create_webdriver() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.create_time">create_time() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.create_webdriver">create_webdriver() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.create_workbook">create_workbook() (RPA.Excel.Files.Files method)</a>
 </li>
@@ -771,7 +871,11 @@
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.current">current (RPA.Robocorp.WorkItems.WorkItems property)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.cwd">cwd() (RPA.FTP.FTP method)</a>
+
+      <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.cwd">(RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -782,7 +886,15 @@
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Database">Database (class in RPA.Database)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.debug">debug() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.debug">debug() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.debug">(RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.debug">(RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.debugging">debugging (RPA.FTP.ImplicitFTP_TLS attribute)</a>
 </li>
       <li><a href="libraries/crypto/python.html#RPA.Crypto.Crypto.decrypt_file">decrypt_file() (RPA.Crypto.Crypto method)</a>
 </li>
@@ -791,6 +903,8 @@
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Speed.DEFAULT">DEFAULT (RPA.Desktop.Windows.Speed attribute)</a>
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.ConfigurationType.default">default (RPA.Robocorp.Process.ConfigurationType attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.default_capabilities">default_capabilities (RPA.Browser.Selenium.FirefoxOptions property)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.DEFAULT_RETRY_METHOD_LIST">DEFAULT_RETRY_METHOD_LIST (RPA.HTTP.HTTP attribute)</a>
 </li>
@@ -801,6 +915,8 @@
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.delete">delete() (RPA.FTP.FTP method)</a>
 
       <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.delete">(RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
         <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.delete">(RPA.MSGraph.SharedItem method)</a>
 </li>
       </ul></li>
@@ -872,8 +988,12 @@
       </ul></li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.describe_salesforce_object">describe_salesforce_object() (RPA.Salesforce.Salesforce method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.description">description (RPA.Robocorp.Vault.Secret property)</a>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.description">description (RPA.JavaAccessBridge.JavaElement attribute)</a>
+
+      <ul>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Secret.description">(RPA.Robocorp.Vault.Secret property)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.description">[1]</a>
 </li>
+      </ul></li>
       <li><a href="libraries/database/python.html#RPA.Database.Database.description">description() (RPA.Database.Database method)</a>
 </li>
       <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop">Desktop (class in RPA.Desktop)</a>
@@ -905,6 +1025,8 @@
       <li><a href="libraries/tables/python.html#RPA.Tables.Dialect">Dialect (class in RPA.Tables)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.dimensions">dimensions (RPA.Tables.Table property)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.dir">dir() (RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.Directory">Directory (class in RPA.FileSystem)</a>
 </li>
@@ -980,6 +1102,8 @@
         <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.download">(RPA.MSGraph.SharedItem method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.download_attachment">download_attachment() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.download_file_from_onedrive">download_file_from_onedrive() (RPA.MSGraph.MSGraph method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.download_file_from_share_link">download_file_from_share_link() (RPA.MSGraph.MSGraph method)</a>
@@ -996,22 +1120,38 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.drag_and_drop">drag_and_drop() (RPA.Desktop.Windows.Windows method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.driver">driver (RPA.Browser.Selenium.BrowserManagementKeywordsOverride property)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.driver">driver (RPA.Browser.Selenium.BrowserManagementKeywords property)</a>
 
       <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.driver">(RPA.Browser.Selenium.RobocorpElementFinder property)</a>
+</li>
         <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.driver">(RPA.Browser.Selenium.Selenium property)</a>
 </li>
-      </ul></li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.drivers">drivers (RPA.Browser.Selenium.BrowserManagementKeywordsOverride property)</a>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.driver">(RPA.Browser.Selenium.WindowKeywords property)</a>
 </li>
+      </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.drivers">drivers (RPA.Browser.Selenium.BrowserManagementKeywords property)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.drivers">(RPA.Browser.Selenium.RobocorpElementFinder property)</a>
+</li>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.drivers">(RPA.Browser.Selenium.WindowKeywords property)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.element_finder">element_finder (RPA.Browser.Selenium.BrowserManagementKeywordsOverride property)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.element_finder">element_finder (RPA.Browser.Selenium.BrowserManagementKeywords property)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.element_finder">(RPA.Browser.Selenium.RobocorpElementFinder property)</a>
 </li>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.element_finder">(RPA.Browser.Selenium.WindowKeywords property)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.element_should_be_present">element_should_be_present() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.element_value_should_be">element_value_should_be() (RPA.SAP.SAP method)</a>
@@ -1032,6 +1172,8 @@
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.EmptyQueue">EmptyQueue</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.enable_mobile">enable_mobile() (RPA.Browser.Selenium.FirefoxOptions method)</a>
+</li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.enable_screenshots_on_error">enable_screenshots_on_error() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.enabled">enabled (RPA.JavaAccessBridge.JavaElement attribute)</a>
@@ -1040,7 +1182,7 @@
 </li>
       <li><a href="libraries/crypto/python.html#RPA.Crypto.Crypto.encrypt_string">encrypt_string() (RPA.Crypto.Crypto method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.ENCRYPTION_SCHEME">ENCRYPTION_SCHEME (RPA.Robocorp.Vault.RobocorpVault attribute)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault.ENCRYPTION_SCHEME">ENCRYPTION_SCHEME (RPA.Robocorp.Vault.RobocorpVault attribute)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.ENCRYPTION_SCHEME">[1]</a>
 </li>
       <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.engine">engine (RPA.DocumentAI.DocumentAI.DocumentAI property)</a>
 </li>
@@ -1062,13 +1204,21 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.event_firing_webdriver">event_firing_webdriver (RPA.Browser.Selenium.BrowserManagementKeywordsOverride property)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.event_firing_webdriver">event_firing_webdriver (RPA.Browser.Selenium.BrowserManagementKeywords property)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.event_firing_webdriver">(RPA.Browser.Selenium.RobocorpElementFinder property)</a>
 </li>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.event_firing_webdriver">(RPA.Browser.Selenium.WindowKeywords property)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Dialect.Excel">Excel (RPA.Tables.Dialect attribute)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Dialect.ExcelTab">ExcelTab (RPA.Tables.Dialect attribute)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange">Exchange (class in RPA.Email.Exchange)</a>
+</li>
+      <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.execute_apex">execute_apex() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.execute_batch">execute_batch() (RPA.Hubspot.Hubspot method)</a>
 </li>
@@ -1130,17 +1280,21 @@
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File">File (class in RPA.FileSystem)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.file">file (RPA.FTP.ImplicitFTP_TLS attribute)</a>
+</li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.RobocorpAdapter.file_id">file_id() (RPA.Robocorp.WorkItems.RobocorpAdapter method)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.file_size">file_size() (RPA.FTP.FTP method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.FileAdapter">FileAdapter (class in RPA.Robocorp.WorkItems)</a>
 </li>
+      <li><a href="libraries/word_application/python.html#RPA.Word.Application.Application.FILEFORMATS">FILEFORMATS (RPA.Word.Application.Application attribute)</a>
+</li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files">Files (class in RPA.Excel.Files)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItem.files">files (RPA.Robocorp.WorkItems.WorkItem property)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets">FileSecrets (class in RPA.Robocorp.Vault)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.FileSecrets">FileSecrets (class in RPA.Robocorp.Vault)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets">[1]</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem">FileSystem (class in RPA.FileSystem)</a>
 </li>
@@ -1152,24 +1306,38 @@
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.filter_empty_rows">filter_empty_rows() (RPA.Tables.Tables method)</a>
 </li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.filter_matching_signatures">filter_matching_signatures() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.filter_table_by_column">filter_table_by_column() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.filter_table_with_keyword">filter_table_with_keyword() (RPA.Tables.Tables method)</a>
 </li>
-      <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.find">find() (RPA.JSON.RPAFilter method)</a>
-</li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.find_element">find_element() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.find">find() (RPA.Browser.Selenium.RobocorpElementFinder method)</a>
 
       <ul>
+        <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.find">(RPA.JSON.RPAFilter method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.find_element">find_element() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.find_element">(RPA.Browser.Selenium.RobocorpElementFinder method)</a>
+</li>
         <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.find_element">(RPA.Browser.Selenium.Selenium method)</a>
+</li>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.find_element">(RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.find_element">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.find_elements">find_elements() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.find_elements">find_elements() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 
       <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.find_elements">(RPA.Browser.Selenium.RobocorpElementFinder method)</a>
+</li>
         <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.find_elements">(RPA.Browser.Selenium.Selenium method)</a>
+</li>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.find_elements">(RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -1198,11 +1366,17 @@
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.Images.find_template_in_image">find_template_in_image() (RPA.Images.Images method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions">FirefoxOptions (class in RPA.Browser.Selenium)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.first_business_day_of_the_month">first_business_day_of_the_month() (RPA.Calendar.Calendar method)</a>
+</li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.flag_messages">flag_messages() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.focus_and_click">focus_and_click() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.focus_and_input_text">focus_and_input_text() (RPA.SAP.SAP method)</a>
+</li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.focusable">focusable (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.follow">follow() (RPA.Twitter.Twitter method)</a>
 </li>
@@ -1261,12 +1435,14 @@
       <li><a href="libraries/database/python.html#RPA.Database.Configuration.get">get() (RPA.Database.Configuration method)</a>
 
       <ul>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.get">(RPA.Robocorp.Vault.Secret method)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Secret.get">(RPA.Robocorp.Vault.Secret method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.get">[1]</a>
 </li>
         <li><a href="libraries/tables/python.html#RPA.Tables.Table.get">(RPA.Tables.Table method)</a>
 </li>
       </ul></li>
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.get_accounts">get_accounts() (RPA.Netsuite.Netsuite method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_action_chain_delay">get_action_chain_delay() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.get_active_worksheet">get_active_worksheet() (RPA.Excel.Files.Files method)</a>
 </li>
@@ -1276,7 +1452,11 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_app">get_app() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.get_application_constants">get_application_constants() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/archive/python.html#RPA.Archive.Archive.get_archive_info">get_archive_info() (RPA.Archive.Archive method)</a>
+</li>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.get_attachments_from_message">get_attachments_from_message() (in module RPA.Email.ImapSmtp)</a>
 </li>
       <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.get_boot_time">get_boot_time() (RPA.Desktop.OperatingSystem.OperatingSystem method)</a>
 
@@ -1284,13 +1464,15 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_boot_time">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_browser_aliases">get_browser_aliases() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_browser_aliases">get_browser_aliases() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_browser_capabilities">get_browser_capabilities() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_browser_ids">get_browser_ids() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_browser_ids">get_browser_ids() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.get_cell">get_cell() (RPA.Tables.Table method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.get_cell_history">get_cell_history() (RPA.Smartsheet.Smartsheet method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.get_cell_value">get_cell_value() (RPA.Excel.Files.Files method)</a>
 
@@ -1329,6 +1511,8 @@
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.get_current_session_alias">get_current_session_alias() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.get_current_stage_of_object">get_current_stage_of_object() (RPA.Hubspot.Hubspot method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.get_current_user">get_current_user() (RPA.Smartsheet.Smartsheet method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.get_current_work_item">get_current_work_item() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
@@ -1382,6 +1566,8 @@
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.get_elements">get_elements() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.get_email_body_from_message">get_email_body_from_message() (in module RPA.Email.ImapSmtp)</a>
+</li>
       <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.get_emails">get_emails() (RPA.Outlook.Application.Application method)</a>
 </li>
       <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.get_fields_from_prediction_result">get_fields_from_prediction_result() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
@@ -1423,6 +1609,8 @@
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.get_folder_list">get_folder_list() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.get_input_work_item">get_input_work_item() (RPA.Robocorp.WorkItems.WorkItems method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.get_iso_calendar">get_iso_calendar() (RPA.Calendar.Calendar method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_items_from_sharepoint_list">get_items_from_sharepoint_list() (RPA.MSGraph.MSGraph method)</a>
 </li>
@@ -1498,11 +1686,17 @@
         <li><a href="libraries/windows/python.html#RPA.Windows.Windows.get_keyword_types">(RPA.Windows.Windows method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_location">get_location() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.get_locations">get_locations() (RPA.Browser.Selenium.WindowKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.get_locations">(RPA.Netsuite.Netsuite method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_location">get_location() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
-</li>
-      <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.get_locations">get_locations() (RPA.Netsuite.Netsuite method)</a>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.get_locator_tree">get_locator_tree() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.get_machine_name">get_machine_name() (RPA.Desktop.OperatingSystem.OperatingSystem method)</a>
 
@@ -1510,6 +1704,8 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_machine_name">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.get_matching_signatures">get_matching_signatures() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
+</li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_me">get_me() (RPA.MSGraph.MSGraph method)</a>
 
       <ul>
@@ -1554,6 +1750,8 @@
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.get_part_filename">get_part_filename() (in module RPA.Email.ImapSmtp)</a>
 </li>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.get_payload_decoded_or_not">get_payload_decoded_or_not() (in module RPA.Email.ImapSmtp)</a>
+</li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.get_permissions">get_permissions() (RPA.MSGraph.SharedItem method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.get_pipeline">get_pipeline() (RPA.Hubspot.Hubspot method)</a>
@@ -1572,7 +1770,7 @@
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.get_products_in_pricelist">get_products_in_pricelist() (RPA.Salesforce.Salesforce method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.get_publickey">get_publickey() (RPA.Robocorp.Vault.RobocorpVault method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault.get_publickey">get_publickey() (RPA.Robocorp.Vault.RobocorpVault method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.get_publickey">[1]</a>
 </li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_redshift_statement_results">get_redshift_statement_results() (RPA.Cloud.AWS.AWS method)</a>
 
@@ -1586,8 +1784,12 @@
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.get_robot_run_artifact">get_robot_run_artifact() (RPA.Robocorp.Process.Process method)</a>
 </li>
-      <li><a href="libraries/tables/python.html#RPA.Tables.Table.get_row">get_row() (RPA.Tables.Table method)</a>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.get_row">get_row() (RPA.Smartsheet.Smartsheet method)</a>
+
+      <ul>
+        <li><a href="libraries/tables/python.html#RPA.Tables.Table.get_row">(RPA.Tables.Table method)</a>
 </li>
+      </ul></li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_row_count">get_row_count() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Database.get_rows">get_rows() (RPA.Database.Database method)</a>
@@ -1602,29 +1804,37 @@
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_scroll_position">get_scroll_position() (RPA.SAP.SAP method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.BaseSecretManager.get_secret">get_secret() (RPA.Robocorp.Vault.BaseSecretManager method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.BaseSecretManager.get_secret">get_secret() (RPA.Robocorp.Vault.BaseSecretManager method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.BaseSecretManager.get_secret">[1]</a>
 
       <ul>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.get_secret">(RPA.Robocorp.Vault.FileSecrets method)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.FileSecrets.get_secret">(RPA.Robocorp.Vault.FileSecrets method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.get_secret">[1]</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.get_secret">(RPA.Robocorp.Vault.RobocorpVault method)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault.get_secret">(RPA.Robocorp.Vault.RobocorpVault method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.get_secret">[1]</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.get_secret">(RPA.Robocorp.Vault.Vault method)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Vault.get_secret">(RPA.Robocorp.Vault.Vault method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.get_secret">[1]</a>
 </li>
       </ul></li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_selenium_implicit_wait">get_selenium_implicit_wait() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_selenium_implicit_wait">get_selenium_implicit_wait() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_selenium_speed">get_selenium_speed() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_selenium_page_load_timeout">get_selenium_page_load_timeout() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_selenium_timeout">get_selenium_timeout() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_selenium_speed">get_selenium_speed() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_session_id">get_session_id() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_selenium_timeout">get_selenium_timeout() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_session_id">get_session_id() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_sharepoint_site">get_sharepoint_site() (RPA.MSGraph.MSGraph method)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.get_sheet">get_sheet() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.get_sheet_owner">get_sheet_owner() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.get_signature_image">get_signature_image() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.get_slice">get_slice() (RPA.Tables.Table method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_source">get_source() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_source">get_source() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_spaced_string">get_spaced_string() (RPA.Desktop.Windows.Windows method)</a>
 </li>
@@ -1658,9 +1868,13 @@
 </li>
       <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.get_time_based_otp">get_time_based_otp() (RPA.MFA.MFA method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_timeout">get_timeout() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_timeout">get_timeout() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.get_timeout">(RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_title">get_title() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.get_title">get_title() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.get_token">get_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
 </li>
@@ -1694,13 +1908,27 @@
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.get_versions">get_versions() (RPA.MSGraph.SharedItem method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_webelement">get_webelement() (RPA.Browser.Selenium.Selenium method)</a>
+</li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.get_welcome_message">get_welcome_message() (RPA.FTP.FTP method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_window_elements">get_window_elements() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.get_window_handles">get_window_handles() (RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.get_window_identifiers">get_window_identifiers() (RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_window_list">get_window_list() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.get_window_names">get_window_names() (RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.get_window_position">get_window_position() (RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.get_window_size">get_window_size() (RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_window_title">get_window_title() (RPA.SAP.SAP method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.get_window_titles">get_window_titles() (RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_words">get_words() (RPA.Cloud.AWS.AWS method)</a>
 
@@ -1722,13 +1950,21 @@
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.get_worksheet_value">get_worksheet_value() (RPA.Excel.Files.Files method)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.getline">getline() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.getmultiline">getmultiline() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.getresp">getresp() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.getwelcome">getwelcome() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.Action.glabel_add">glabel_add (RPA.Email.ImapSmtp.Action attribute)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.Action.glabel_remove">glabel_remove (RPA.Email.ImapSmtp.Action attribute)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.go_back">go_back() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.go_back">go_back() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.go_to">go_to() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.go_to">go_to() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google">Google (class in RPA.Cloud.Google)</a>
 </li>
@@ -1763,7 +1999,7 @@
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.headers">headers (RPA.Robocorp.Process.Process property)</a>
 
       <ul>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.headers">(RPA.Robocorp.Vault.RobocorpVault property)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault.headers">(RPA.Robocorp.Vault.RobocorpVault property)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.headers">[1]</a>
 </li>
       </ul></li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.height">height (RPA.JavaAccessBridge.JavaElement attribute)</a>
@@ -1777,6 +2013,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.highlight_elements">highlight_elements() (RPA.Browser.Selenium.Selenium method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.host">host (RPA.FTP.ImplicitFTP_TLS attribute)</a>
 </li>
       <li><a href="libraries/mfa/python.html#RPA.MFA.HOTPNotSetError">HOTPNotSetError</a>
 </li>
@@ -1816,6 +2054,12 @@
       </ul></li>
       <li><a href="libraries/tables/python.html#RPA.Tables.if_none">if_none() (in module RPA.Tables)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.ignore_local_proxy_environment_variables">ignore_local_proxy_environment_variables() (RPA.Browser.Selenium.FirefoxOptions method)</a>
+</li>
+      <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI.image_create">image_create() (RPA.OpenAI.OpenAI method)</a>
+</li>
+      <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI.image_create_variation">image_create_variation() (RPA.OpenAI.OpenAI method)</a>
+</li>
       <li><a href="libraries/images/python.html#RPA.Images.ImageNotFoundError">ImageNotFoundError</a>
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.Images">Images (class in RPA.Images)</a>
@@ -1825,6 +2069,8 @@
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp">ImapSmtp (class in RPA.Email.ImapSmtp)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.AccessType.IMPERSONATION">IMPERSONATION (RPA.Email.Exchange.AccessType attribute)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS">ImplicitFTP_TLS (class in RPA.FTP)</a>
 </li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.import_tables">import_tables() (in module RPA.Cloud.AWS)</a>
 </li>
@@ -1844,10 +2090,16 @@
         <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.index">(RPA.FileSystem.File method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.index_in_parent">index_in_parent (RPA.JavaAccessBridge.JavaElement attribute)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.index_location">index_location() (RPA.Tables.Table method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.info">info() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.info">info() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.info">(RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
+      </ul></li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.init_comprehend_client">init_comprehend_client() (RPA.Cloud.AWS.AWS method)</a>
 
       <ul>
@@ -1918,12 +2170,12 @@
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.insert_image">(RPA.Excel.Files.XlsxWorkbook method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.insert_image_to_worksheet">insert_image_to_worksheet() (RPA.Excel.Files.Files method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.insert_rows_after">insert_rows_after() (RPA.Excel.Files.Files method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.insert_rows_before">insert_rows_before() (RPA.Excel.Files.Files method)</a>
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.instance">instance (RPA.Salesforce.Salesforce property)</a>
@@ -1936,6 +2188,8 @@
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_checkbox_selected">is_checkbox_selected() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_chromium">is_chromium (RPA.Browser.Selenium.Selenium property)</a>
+</li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.is_directory_empty">is_directory_empty() (RPA.FileSystem.FileSystem method)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.is_directory_not_empty">is_directory_not_empty() (RPA.FileSystem.FileSystem method)</a>
@@ -1946,10 +2200,14 @@
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_element_disabled">is_element_disabled() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.is_element_enabled">is_element_enabled() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.is_element_enabled">is_element_enabled() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 
       <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.is_element_enabled">(RPA.Browser.Selenium.RobocorpElementFinder method)</a>
+</li>
         <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_element_enabled">(RPA.Browser.Selenium.Selenium method)</a>
+</li>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.is_element_enabled">(RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.is_element_enabled">(RPA.Desktop.Windows.Windows method)</a>
 </li>
@@ -1994,21 +2252,37 @@
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.is_sheet_empty">(RPA.Excel.Files.XlsxWorkbook static method)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.is_text_present">is_text_present() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.is_text_present">is_text_present() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.is_text_present">(RPA.Browser.Selenium.RobocorpElementFinder method)</a>
 </li>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.is_text_present">(RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_textarea_value">is_textarea_value() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_textfield_value">is_textfield_value() (RPA.Browser.Selenium.Selenium method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.is_the_date_business_day">is_the_date_business_day() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.is_the_date_holiday">is_the_date_holiday() (RPA.Calendar.Calendar method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_title">is_title() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Tweet.is_truncated">is_truncated (RPA.Twitter.Tweet attribute)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.is_visible">is_visible() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.is_visible">is_visible() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.is_visible">(RPA.Browser.Selenium.RobocorpElementFinder method)</a>
 </li>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.is_visible">(RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/tables/python.html#RPA.Tables.iskeyword">iskeyword() (in module RPA.Tables)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.items">items() (RPA.Robocorp.Vault.Secret method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Secret.items">items() (RPA.Robocorp.Vault.Secret method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.items">[1]</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.iter_dicts">iter_dicts() (RPA.Tables.Table method)</a>
 </li>
@@ -2040,18 +2314,20 @@
 <h2 id="K">K</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.KEY">KEY (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
+</li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceTextAnalytics.key_phrases">key_phrases() (RPA.Cloud.Azure.ServiceTextAnalytics method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.keys">keys() (RPA.Robocorp.Vault.Secret method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Secret.keys">keys() (RPA.Robocorp.Vault.Secret method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.keys">[1]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.kill_process">kill_process() (RPA.Desktop.OperatingSystem.OperatingSystem method)</a>
 
       <ul>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.kill_process">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.kill_process_by_pid">kill_process_by_pid() (RPA.Desktop.OperatingSystem.OperatingSystem method)</a>
 
       <ul>
@@ -2066,6 +2342,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Tweet.lang">lang (RPA.Twitter.Tweet attribute)</a>
 </li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.last_business_day_of_the_month">last_business_day_of_the_month() (RPA.Calendar.Calendar method)</a>
+</li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.like">like() (RPA.Twitter.Twitter method)</a>
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.TemplateMatcher.LIMIT_FAILSAFE">LIMIT_FAILSAFE (RPA.Images.TemplateMatcher attribute)</a>
@@ -2074,12 +2352,16 @@
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.list_associations">list_associations() (RPA.Hubspot.Hubspot method)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.list_attachments">list_attachments() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.list_buckets">list_buckets() (RPA.Cloud.AWS.AWS method)</a>
 
       <ul>
         <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.list_buckets">(RPA.Cloud.AWS.ServiceS3 method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.list_columns">list_columns() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.list_directories_in_directory">list_directories_in_directory() (RPA.FileSystem.FileSystem method)</a>
 </li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.list_files">list_files() (RPA.Cloud.AWS.AWS method)</a>
@@ -2105,6 +2387,8 @@
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.list_files_in_onedrive_folder">list_files_in_onedrive_folder() (RPA.MSGraph.MSGraph method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.list_files_in_sharepoint_site_drive">list_files_in_sharepoint_site_drive() (RPA.MSGraph.MSGraph method)</a>
+</li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.list_java_windows">list_java_windows() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.list_messages">list_messages() (RPA.Email.Exchange.Exchange method)</a>
 
@@ -2146,19 +2430,23 @@
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.list_sharepoint_site_drives">list_sharepoint_site_drives() (RPA.MSGraph.MSGraph method)</a>
 </li>
-      <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceSpeech.list_supported_voices">list_supported_voices() (RPA.Cloud.Azure.ServiceSpeech method)</a>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.list_sheet_filters">list_sheet_filters() (RPA.Smartsheet.Smartsheet method)</a>
 </li>
-      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.list_unread_messages">list_unread_messages() (RPA.Email.Exchange.Exchange method)</a>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.list_sheets">list_sheets() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
+      <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceSpeech.list_supported_voices">list_supported_voices() (RPA.Cloud.Azure.ServiceSpeech method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.list_unread_messages">list_unread_messages() (RPA.Email.Exchange.Exchange method)</a>
+</li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.list_work_item_files">list_work_item_files() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.list_work_item_variables">list_work_item_variables() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.list_worksheets">list_worksheets() (RPA.Excel.Files.Files method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.load">load() (RPA.Robocorp.Vault.FileSecrets method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.FileSecrets.load">load() (RPA.Robocorp.Vault.FileSecrets method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.load">[1]</a>
 
       <ul>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItem.load">(RPA.Robocorp.WorkItems.WorkItem method)</a>
@@ -2180,31 +2468,43 @@
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.location">location (RPA.Browser.Selenium.Selenium property)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.location_should_be">location_should_be() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.location_should_be">location_should_be() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.location_should_contain">location_should_contain() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.location_should_contain">location_should_contain() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds.lock">lock (RPA.Email.Exchange.OAuth2Creds property)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.lock_screen">lock_screen() (RPA.Desktop.Windows.Windows method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.log">log() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.log">log() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.log">(RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.log_dir">log_dir (RPA.Browser.Selenium.BrowserManagementKeywordsOverride property)</a>
+      </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.log_dir">log_dir (RPA.Browser.Selenium.BrowserManagementKeywords property)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.log_dir">(RPA.Browser.Selenium.WindowKeywords property)</a>
 </li>
+      </ul></li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.log_directory_tree">log_directory_tree() (RPA.FileSystem.FileSystem method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.log_in">log_in() (RPA.Desktop.Windows.Windows method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.log_location">log_location() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.log_location">log_location() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.log_request">log_request() (in module RPA.HTTP)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.log_response">log_response() (in module RPA.HTTP)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.log_source">log_source() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.log_source">log_source() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.log_source">(RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.log_title">log_title() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.log_title">log_title() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.logger">logger (RPA.Cloud.AWS.AWS attribute)</a>
 
@@ -2226,8 +2526,12 @@
         <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.logger">(RPA.Cloud.Azure.AzureBase attribute)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.login">login() (RPA.Netsuite.Netsuite method)</a>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.login">login() (RPA.FTP.ImplicitFTP_TLS method)</a>
+
+      <ul>
+        <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.login">(RPA.Netsuite.Netsuite method)</a>
 </li>
+      </ul></li>
       <li><a href="libraries/images/python.html#RPA.Images.RGB.luminance">luminance() (RPA.Images.RGB method)</a>
 </li>
   </ul></td>
@@ -2240,6 +2544,10 @@
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.make_datum">make_datum() (RPA.JSON.RPAFilter method)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.makepasv">makepasv() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.makeport">makeport() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.map_column_values">map_column_values() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.mark_as_read">mark_as_read() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
@@ -2250,7 +2558,11 @@
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.TemplateMatcher.match">match() (RPA.Images.TemplateMatcher method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.maximize_browser_window">maximize_browser_window() (RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.maximize_window">maximize_window() (RPA.SAP.SAP method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.maxline">maxline (RPA.FTP.ImplicitFTP_TLS attribute)</a>
 </li>
       <li><a href="libraries/crypto/python.html#RPA.Crypto.Hash.MD5">MD5 (RPA.Crypto.Hash attribute)</a>
 </li>
@@ -2265,6 +2577,12 @@
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.minimize_dialog">minimize_dialog() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.mkd">mkd() (RPA.FTP.FTP method)</a>
+
+      <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.mkd">(RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.mlsd">mlsd() (RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.BatchInputFactory.mode">mode (RPA.Hubspot.BatchInputFactory property)</a>
 </li>
@@ -2274,7 +2592,11 @@
       <ul>
         <li><a href="libraries/archive/python.html#module-RPA.Archive">RPA.Archive</a>
 </li>
+        <li><a href="libraries/assistant/python.html#module-RPA.Assistant">RPA.Assistant</a>
+</li>
         <li><a href="libraries/browser_selenium/python.html#module-RPA.Browser.Selenium">RPA.Browser.Selenium</a>
+</li>
+        <li><a href="libraries/calendar/python.html#module-RPA.Calendar">RPA.Calendar</a>
 </li>
         <li><a href="libraries/cloud_aws/python.html#module-RPA.Cloud.AWS">RPA.Cloud.AWS</a>
 </li>
@@ -2332,13 +2654,15 @@
 </li>
         <li><a href="libraries/notifier/python.html#module-RPA.Notifier">RPA.Notifier</a>
 </li>
+        <li><a href="libraries/openai/python.html#module-RPA.OpenAI">RPA.OpenAI</a>
+</li>
         <li><a href="libraries/outlook_application/python.html#module-RPA.Outlook.Application">RPA.Outlook.Application</a>
 </li>
         <li><a href="libraries/pdf/python.html#module-RPA.PDF">RPA.PDF</a>
 </li>
         <li><a href="libraries/robocorp_process/python.html#module-RPA.Robocorp.Process">RPA.Robocorp.Process</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#module-RPA.Robocorp.Vault">RPA.Robocorp.Vault</a>
+        <li><a href="libraries/robocorp_storage/python.html#module-RPA.Robocorp.Vault">RPA.Robocorp.Vault</a>, <a href="libraries/robocorp_vault/python.html#module-RPA.Robocorp.Vault">[1]</a>
 </li>
         <li><a href="libraries/robocorp_workitems/python.html#module-RPA.Robocorp.WorkItems">RPA.Robocorp.WorkItems</a>
 </li>
@@ -2349,6 +2673,8 @@
         <li><a href="libraries/sap/python.html#module-RPA.SAP">RPA.SAP</a>
 </li>
         <li><a href="libraries/slack/python.html#module-RPA.Slack">RPA.Slack</a>
+</li>
+        <li><a href="libraries/smartsheet/python.html#module-RPA.Smartsheet">RPA.Smartsheet</a>
 </li>
         <li><a href="libraries/tables/python.html#module-RPA.Tables">RPA.Tables</a>
 </li>
@@ -2432,7 +2758,7 @@
 </li>
         <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.name">(RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.name">(RPA.Robocorp.Vault.Secret property)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Secret.name">(RPA.Robocorp.Vault.Secret property)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.name">[1]</a>
 </li>
         <li><a href="libraries/twitter/python.html#RPA.Twitter.Tweet.name">(RPA.Twitter.Tweet attribute)</a>
 </li>
@@ -2457,9 +2783,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.new_query">new_query() (RPA.MSGraph.SharedItem method)</a>
 </li>
-      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.node">node (RPA.JavaAccessBridge.JavaElement attribute)</a>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.nlst">nlst() (RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
-      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.NoRecipientsError">NoRecipientsError</a>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.node">node (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.normalize_options">normalize_options() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
@@ -2480,6 +2806,8 @@
       <li><a href="libraries/notifier/python.html#RPA.Notifier.Notifier.notify_twilio">notify_twilio() (RPA.Notifier.Notifier method)</a>
 </li>
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.ns_instance_required">ns_instance_required() (in module RPA.Netsuite)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.ntransfercmd">ntransfercmd() (RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2515,7 +2843,7 @@
       </ul></li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.open_available_browser">open_available_browser() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.open_browser">open_browser() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.open_browser">open_browser() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.open_chrome_browser">open_chrome_browser() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
@@ -2523,10 +2851,10 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.open_dialog">open_dialog() (RPA.Desktop.Windows.Windows method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.open_executable">open_executable() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.open_file">open_file() (RPA.Desktop.Windows.Windows method)</a>
 
       <ul>
@@ -2547,6 +2875,8 @@
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.open_workbook">(RPA.Excel.Files.Files method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI">OpenAI (class in RPA.OpenAI)</a>
+</li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.ExtendedFilter.openapi_types">openapi_types (RPA.Hubspot.ExtendedFilter attribute)</a>
 </li>
       <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem">OperatingSystem (class in RPA.Desktop.OperatingSystem)</a>
@@ -2635,10 +2965,10 @@
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAJsonPathParser.p_sorts_sort">p_sorts_sort() (RPA.JSON.RPAJsonPathParser method)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.params">params (RPA.Robocorp.Vault.RobocorpVault property)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.page_load_strategy">page_load_strategy (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault.params">params (RPA.Robocorp.Vault.RobocorpVault property)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.params">[1]</a>
+</li>
       <li><a href="libraries/json/python.html#RPA.JSON.parse">parse() (in module RPA.JSON)</a>
 
       <ul>
@@ -2649,8 +2979,12 @@
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAJsonPathParser.parse_token_stream">parse_token_stream() (RPA.JSON.RPAJsonPathParser method)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.passiveserver">passiveserver (RPA.FTP.ImplicitFTP_TLS attribute)</a>
+</li>
       <li><a href="libraries/desktop_clipboard/python.html#RPA.Desktop.Clipboard.Clipboard.paste_from_clipboard">paste_from_clipboard() (RPA.Desktop.Clipboard.Clipboard method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.patch_on_session">patch_on_session() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.patch_request">patch_request() (RPA.HTTP.HTTP method)</a>
@@ -2669,9 +3003,13 @@
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.pipelines">pipelines (RPA.Hubspot.Hubspot property)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.platform_name">platform_name (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.pop_table_column">pop_table_column() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.pop_table_row">pop_table_row() (RPA.Tables.Tables method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.port">port (RPA.FTP.ImplicitFTP_TLS attribute)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.post_on_session">post_on_session() (RPA.HTTP.HTTP method)</a>
 </li>
@@ -2683,9 +3021,13 @@
 </li>
       <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.predict_file">predict_file() (RPA.DocumentAI.Nanonets.Nanonets method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.preferences">preferences (RPA.Browser.Selenium.FirefoxOptions property)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.press_keys">press_keys() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.print_element_tree">print_element_tree() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
+</li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.print_locator_tree">print_locator_tree() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.print_to_pdf">print_to_pdf() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
@@ -2705,7 +3047,15 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.process_id_exists">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.profile">profile (RPA.Browser.Selenium.FirefoxOptions property)</a>
+</li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.ExtendedFilter.property_name">property_name (RPA.Hubspot.ExtendedFilter property)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.prot_c">prot_c() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.prot_p">prot_p() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.proxy">proxy (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.put_on_session">put_on_session() (RPA.HTTP.HTTP method)</a>
 </li>
@@ -2717,8 +3067,16 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.put_system_to_sleep">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.pwd">pwd() (RPA.FTP.FTP method)</a>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.putcmd">putcmd() (RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.putline">putline() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.pwd">pwd() (RPA.FTP.FTP method)</a>
+
+      <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.pwd">(RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -2730,7 +3088,11 @@
       <li><a href="libraries/database/python.html#RPA.Database.Database.query">query() (RPA.Database.Database method)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.quit">quit() (RPA.FTP.FTP method)</a>
+
+      <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.quit">(RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.quit_application">quit_application() (RPA.Desktop.Windows.Windows method)</a>
@@ -2795,6 +3157,8 @@
         <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.refresh_oauth_token">(RPA.MSGraph.MSGraph method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.refresh_sheet">refresh_sheet() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.refresh_window">refresh_window() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.region">region (RPA.Cloud.AWS.AWS attribute)</a>
@@ -2817,6 +3181,8 @@
         <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.region">(RPA.Cloud.Azure.AzureBase attribute)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.register">register() (RPA.Browser.Selenium.RobocorpElementFinder method)</a>
+</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.register_driver">register_driver() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.register_file_upload">register_file_upload() (RPA.Robocorp.Process.Process method)</a>
@@ -2831,7 +3197,7 @@
       </ul></li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.release_input_work_item">release_input_work_item() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.reload_page">reload_page() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.reload_page">reload_page() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.remove_directory">remove_directory() (RPA.FileSystem.FileSystem method)</a>
 </li>
@@ -2864,7 +3230,11 @@
 </li>
       </ul></li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.rename">rename() (RPA.FTP.FTP method)</a>
+
+      <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.rename">(RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
+      </ul></li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.rename_folder">rename_folder() (RPA.Email.Exchange.Exchange method)</a>
 
       <ul>
@@ -2885,7 +3255,7 @@
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.request_should_be_successful">request_should_be_successful() (RPA.HTTP.HTTP method)</a>
 </li>
-      <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.require_open_xlsx_workbook">require_open_xlsx_workbook() (RPA.Excel.Files.Files method)</a>
+      <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.requires_workbook">requires_workbook() (in module RPA.Excel.Application)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.BaseAdapter.reserve_input">reserve_input() (RPA.Robocorp.WorkItems.BaseAdapter method)</a>
 
@@ -2895,11 +3265,23 @@
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.RobocorpAdapter.reserve_input">(RPA.Robocorp.WorkItems.RobocorpAdapter method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.reset_custom_holidays">reset_custom_holidays() (RPA.Calendar.Calendar method)</a>
+</li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.restore_dialog">restore_dialog() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.result">result (RPA.DocumentAI.DocumentAI.DocumentAI property)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.retrbinary">retrbinary() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.retrlines">retrlines() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.retry_work_item">retry_work_item() (RPA.Robocorp.Process.Process method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.return_holidays">return_holidays() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.return_next_business_day">return_next_business_day() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.return_previous_business_day">return_previous_business_day() (RPA.Calendar.Calendar method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.return_table_as_raw_list">return_table_as_raw_list() (in module RPA.Tables)</a>
 </li>
@@ -2910,7 +3292,11 @@
       <li><a href="libraries/images/python.html#RPA.Images.RGB">RGB (class in RPA.Images)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.rmd">rmd() (RPA.FTP.FTP method)</a>
+
+      <ul>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.rmd">(RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
+      </ul></li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.robocorp_vault_name">robocorp_vault_name (RPA.Cloud.AWS.AWS attribute)</a>
 
       <ul>
@@ -2933,15 +3319,19 @@
       </ul></li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.RobocorpAdapter">RobocorpAdapter (class in RPA.Robocorp.WorkItems)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault">RobocorpVault (class in RPA.Robocorp.Vault)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder">RobocorpElementFinder (class in RPA.Browser.Selenium)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError">RobocorpVaultError</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault">RobocorpVault (class in RPA.Robocorp.Vault)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault">[1]</a>
+</li>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVaultError">RobocorpVaultError</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError">[1]</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend">RobocorpVaultTokenBackend (class in RPA.MSGraph)</a>
 </li>
-      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.ROBOT_AUTO_KEYWORDS">ROBOT_AUTO_KEYWORDS (RPA.DocumentAI.DocumentAI.DocumentAI attribute)</a>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.ROBOT_AUTO_KEYWORDS">ROBOT_AUTO_KEYWORDS (RPA.Calendar.Calendar attribute)</a>
 
       <ul>
+        <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.ROBOT_AUTO_KEYWORDS">(RPA.DocumentAI.DocumentAI.DocumentAI attribute)</a>
+</li>
         <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.ROBOT_AUTO_KEYWORDS">(RPA.Hubspot.Hubspot attribute)</a>
 </li>
         <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.ROBOT_AUTO_KEYWORDS">(RPA.JavaAccessBridge.JavaAccessBridge attribute)</a>
@@ -2950,11 +3340,15 @@
 </li>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.ROBOT_AUTO_KEYWORDS">(RPA.Robocorp.WorkItems.WorkItems attribute)</a>
 </li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.ROBOT_AUTO_KEYWORDS">(RPA.Smartsheet.Smartsheet attribute)</a>
+</li>
       </ul></li>
       <li><a href="libraries/archive/python.html#RPA.Archive.Archive.ROBOT_LIBRARY_DOC_FORMAT">ROBOT_LIBRARY_DOC_FORMAT (RPA.Archive.Archive attribute)</a>
 
       <ul>
         <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Browser.Selenium.Selenium attribute)</a>
+</li>
+        <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Calendar.Calendar attribute)</a>
 </li>
         <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Cloud.AWS.AWS attribute)</a>
 </li>
@@ -3010,19 +3404,23 @@
 </li>
         <li><a href="libraries/notifier/python.html#RPA.Notifier.Notifier.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Notifier.Notifier attribute)</a>
 </li>
+        <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI.ROBOT_LIBRARY_DOC_FORMAT">(RPA.OpenAI.OpenAI attribute)</a>
+</li>
         <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Outlook.Application.Application attribute)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.ROBOT_LIBRARY_DOC_FORMAT">(RPA.PDF.PDF attribute)</a>
 </li>
         <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Robocorp.Process.Process attribute)</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Robocorp.Vault.Vault attribute)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Vault.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Robocorp.Vault.Vault attribute)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.ROBOT_LIBRARY_DOC_FORMAT">[1]</a>
 </li>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Robocorp.WorkItems.WorkItems attribute)</a>
 </li>
         <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Salesforce.Salesforce attribute)</a>
 </li>
         <li><a href="libraries/slack/python.html#RPA.Slack.Slack.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Slack.Slack attribute)</a>
+</li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Smartsheet.Smartsheet attribute)</a>
 </li>
         <li><a href="libraries/tables/python.html#RPA.Tables.Tables.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Tables.Tables attribute)</a>
 </li>
@@ -3037,6 +3435,8 @@
 
       <ul>
         <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.ROBOT_LIBRARY_SCOPE">(RPA.Browser.Selenium.Selenium attribute)</a>
+</li>
+        <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.ROBOT_LIBRARY_SCOPE">(RPA.Calendar.Calendar attribute)</a>
 </li>
         <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.ROBOT_LIBRARY_SCOPE">(RPA.Cloud.AWS.AWS attribute)</a>
 </li>
@@ -3092,13 +3492,15 @@
 </li>
         <li><a href="libraries/notifier/python.html#RPA.Notifier.Notifier.ROBOT_LIBRARY_SCOPE">(RPA.Notifier.Notifier attribute)</a>
 </li>
+        <li><a href="libraries/openai/python.html#RPA.OpenAI.OpenAI.ROBOT_LIBRARY_SCOPE">(RPA.OpenAI.OpenAI attribute)</a>
+</li>
         <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.ROBOT_LIBRARY_SCOPE">(RPA.Outlook.Application.Application attribute)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.ROBOT_LIBRARY_SCOPE">(RPA.PDF.PDF attribute)</a>
 </li>
         <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.ROBOT_LIBRARY_SCOPE">(RPA.Robocorp.Process.Process attribute)</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.ROBOT_LIBRARY_SCOPE">(RPA.Robocorp.Vault.Vault attribute)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Vault.ROBOT_LIBRARY_SCOPE">(RPA.Robocorp.Vault.Vault attribute)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.ROBOT_LIBRARY_SCOPE">[1]</a>
 </li>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.ROBOT_LIBRARY_SCOPE">(RPA.Robocorp.WorkItems.WorkItems attribute)</a>
 </li>
@@ -3107,6 +3509,8 @@
         <li><a href="libraries/sap/python.html#RPA.SAP.SAP.ROBOT_LIBRARY_SCOPE">(RPA.SAP.SAP attribute)</a>
 </li>
         <li><a href="libraries/slack/python.html#RPA.Slack.Slack.ROBOT_LIBRARY_SCOPE">(RPA.Slack.Slack attribute)</a>
+</li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.ROBOT_LIBRARY_SCOPE">(RPA.Smartsheet.Smartsheet attribute)</a>
 </li>
         <li><a href="libraries/tables/python.html#RPA.Tables.Tables.ROBOT_LIBRARY_SCOPE">(RPA.Tables.Tables attribute)</a>
 </li>
@@ -3129,6 +3533,10 @@
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.row">row (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.ROW_EXCLUDES">ROW_EXCLUDES (RPA.Smartsheet.Smartsheet attribute)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.ROW_INCLUDES">ROW_INCLUDES (RPA.Smartsheet.Smartsheet attribute)</a>
+</li>
       <li>
     RPA.Archive
 
@@ -3137,10 +3545,24 @@
 </li>
       </ul></li>
       <li>
+    RPA.Assistant
+
+      <ul>
+        <li><a href="libraries/assistant/python.html#module-RPA.Assistant">module</a>
+</li>
+      </ul></li>
+      <li>
     RPA.Browser.Selenium
 
       <ul>
         <li><a href="libraries/browser_selenium/python.html#module-RPA.Browser.Selenium">module</a>
+</li>
+      </ul></li>
+      <li>
+    RPA.Calendar
+
+      <ul>
+        <li><a href="libraries/calendar/python.html#module-RPA.Calendar">module</a>
 </li>
       </ul></li>
       <li>
@@ -3340,6 +3762,13 @@
 </li>
       </ul></li>
       <li>
+    RPA.OpenAI
+
+      <ul>
+        <li><a href="libraries/openai/python.html#module-RPA.OpenAI">module</a>
+</li>
+      </ul></li>
+      <li>
     RPA.Outlook.Application
 
       <ul>
@@ -3364,7 +3793,7 @@
     RPA.Robocorp.Vault
 
       <ul>
-        <li><a href="libraries/robocorp_vault/python.html#module-RPA.Robocorp.Vault">module</a>
+        <li><a href="libraries/robocorp_storage/python.html#module-RPA.Robocorp.Vault">module</a>, <a href="libraries/robocorp_vault/python.html#module-RPA.Robocorp.Vault">[1]</a>
 </li>
       </ul></li>
       <li>
@@ -3400,6 +3829,13 @@
 
       <ul>
         <li><a href="libraries/slack/python.html#module-RPA.Slack">module</a>
+</li>
+      </ul></li>
+      <li>
+    RPA.Smartsheet
+
+      <ul>
+        <li><a href="libraries/smartsheet/python.html#module-RPA.Smartsheet">module</a>
 </li>
       </ul></li>
       <li>
@@ -3470,6 +3906,8 @@
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDomainChangeError">SalesforceDomainChangeError</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.sanitize">sanitize() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP">SAP (class in RPA.SAP)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsWorkbook.save">save() (RPA.Excel.Files.XlsWorkbook method)</a>
@@ -3477,7 +3915,7 @@
       <ul>
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.save">(RPA.Excel.Files.XlsxWorkbook method)</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.save">(RPA.Robocorp.Vault.FileSecrets method)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.FileSecrets.save">(RPA.Robocorp.Vault.FileSecrets method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.save">[1]</a>
 </li>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItem.save">(RPA.Robocorp.WorkItems.WorkItem method)</a>
 </li>
@@ -3538,13 +3976,19 @@
       </ul></li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.scroll">scroll() (RPA.SAP.SAP method)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.search">search() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.search_for_objects">search_for_objects() (RPA.Hubspot.Hubspot method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.search_for_users">search_for_users() (RPA.MSGraph.MSGraph method)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.SEARCH_INCLUDES">SEARCH_INCLUDES (RPA.Smartsheet.Smartsheet attribute)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.SEARCH_SCOPES">SEARCH_SCOPES (RPA.Smartsheet.Smartsheet attribute)</a>
+</li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.SearchLexer">SearchLexer (class in RPA.Hubspot)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret">Secret (class in RPA.Robocorp.Vault)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Secret">Secret (class in RPA.Robocorp.Vault)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret">[1]</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.select_checkbox">select_checkbox() (RPA.SAP.SAP method)</a>
 </li>
@@ -3568,6 +4012,10 @@
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.select_window">select_window() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.select_window_by_pid">select_window_by_pid() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
+</li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.select_window_by_title">select_window_by_title() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.selected">selected (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium">Selenium (class in RPA.Browser.Selenium)</a>
@@ -3589,18 +4037,24 @@
 </li>
         <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.send_message">(RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
-        <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.send_message">(RPA.Outlook.Application.Application method)</a>
-</li>
       </ul></li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.send_reply_message">send_reply_message() (RPA.Email.Exchange.Exchange method)</a>
+</li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.send_smtp_hello">send_smtp_hello() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.send_vkey">send_vkey() (RPA.SAP.SAP method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.sendcmd">sendcmd() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.sendeprt">sendeprt() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.sendport">sendport() (RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceTextAnalytics.sentiment_analyze">sentiment_analyze() (RPA.Cloud.Azure.ServiceTextAnalytics method)</a>
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.serializer">serializer (RPA.MSGraph.RobocorpVaultTokenBackend attribute)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.SERIALIZERS">SERIALIZERS (RPA.Robocorp.Vault.FileSecrets attribute)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.FileSecrets.SERIALIZERS">SERIALIZERS (RPA.Robocorp.Vault.FileSecrets attribute)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.SERIALIZERS">[1]</a>
 </li>
       <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend">ServiceComprehend (class in RPA.Cloud.AWS)</a>
 </li>
@@ -3664,7 +4118,11 @@
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.set">set() (RPA.Tables.Table method)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.set_access_token">set_access_token() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.set_account">set_account() (RPA.Salesforce.Salesforce method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.set_action_chain_delay">set_action_chain_delay() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.Application.set_active_worksheet">set_active_worksheet() (RPA.Excel.Application.Application method)</a>
 
@@ -3688,13 +4146,15 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.set_automation_speed">set_automation_speed() (RPA.Desktop.Windows.Windows method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.set_base_url">set_base_url() (RPA.MSGraph.SharedItem method)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.set_binary_mode">set_binary_mode() (RPA.FTP.FTP method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.set_browser_implicit_wait">set_browser_implicit_wait() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.set_browser_implicit_wait">set_browser_implicit_wait() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.set_business_days">set_business_days() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.set_capability">set_capability() (RPA.Browser.Selenium.FirefoxOptions method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.set_cell">set_cell() (RPA.Tables.Table method)</a>
 </li>
@@ -3708,6 +4168,8 @@
       </ul></li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.set_cell_formula">set_cell_formula() (RPA.Excel.Files.Files method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.set_cell_value">set_cell_value() (RPA.Excel.Files.Files method)</a>
 
       <ul>
@@ -3736,15 +4198,19 @@
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.set_debug_level">set_debug_level() (RPA.FTP.FTP method)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.set_debuglevel">set_debuglevel() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/database/python.html#RPA.Database.Configuration.set_default_port">set_default_port() (RPA.Database.Configuration method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.set_default_url_scheme">set_default_url_scheme() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.set_default_url_scheme">set_default_url_scheme() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.set_display_scale_factor">set_display_scale_factor() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.set_domain">set_domain() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.set_download_directory">set_download_directory() (RPA.Browser.Selenium.Selenium method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.set_element_attribute">set_element_attribute() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.set_explicit_wait">set_explicit_wait() (RPA.SAP.SAP method)</a>
 </li>
@@ -3754,7 +4220,15 @@
 </li>
       <li><a href="libraries/word_application/python.html#RPA.Word.Application.Application.set_header">set_header() (RPA.Word.Application.Application method)</a>
 </li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.set_locale">set_locale() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.set_max_retry_time">set_max_retry_time() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.set_mouse_position">set_mouse_position() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.set_pasv">set_pasv() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.set_preference">set_preference() (RPA.Browser.Selenium.FirefoxOptions method)</a>
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.set_pricebook">set_pricebook() (RPA.Salesforce.Salesforce method)</a>
 </li>
@@ -3780,25 +4254,33 @@
         <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.set_robocorp_vault">(RPA.Cloud.Azure.AzureBase method)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/tables/python.html#RPA.Tables.Table.set_row">set_row() (RPA.Tables.Table method)</a>
-</li>
-      <li><a href="libraries/tables/python.html#RPA.Tables.Tables.set_row_as_column_names">set_row_as_column_names() (RPA.Tables.Tables method)</a>
-</li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.BaseSecretManager.set_secret">set_secret() (RPA.Robocorp.Vault.BaseSecretManager method)</a>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.set_row">set_row() (RPA.Smartsheet.Smartsheet method)</a>
 
       <ul>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.set_secret">(RPA.Robocorp.Vault.FileSecrets method)</a>
-</li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.set_secret">(RPA.Robocorp.Vault.RobocorpVault method)</a>
-</li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.set_secret">(RPA.Robocorp.Vault.Vault method)</a>
+        <li><a href="libraries/tables/python.html#RPA.Tables.Table.set_row">(RPA.Tables.Table method)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.set_selenium_implicit_wait">set_selenium_implicit_wait() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/tables/python.html#RPA.Tables.Tables.set_row_as_column_names">set_row_as_column_names() (RPA.Tables.Tables method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.set_selenium_speed">set_selenium_speed() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.set_rows">set_rows() (RPA.Smartsheet.Smartsheet method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.set_selenium_timeout">set_selenium_timeout() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.BaseSecretManager.set_secret">set_secret() (RPA.Robocorp.Vault.BaseSecretManager method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.BaseSecretManager.set_secret">[1]</a>
+
+      <ul>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.FileSecrets.set_secret">(RPA.Robocorp.Vault.FileSecrets method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.set_secret">[1]</a>
+</li>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVault.set_secret">(RPA.Robocorp.Vault.RobocorpVault method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.set_secret">[1]</a>
+</li>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Vault.set_secret">(RPA.Robocorp.Vault.Vault method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault.set_secret">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.set_selenium_implicit_wait">set_selenium_implicit_wait() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.set_selenium_page_load_timeout">set_selenium_page_load_timeout() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.set_selenium_speed">set_selenium_speed() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.set_selenium_timeout">set_selenium_timeout() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.set_styles">set_styles() (RPA.Excel.Files.Files method)</a>
 </li>
@@ -3813,6 +4295,12 @@
       <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.set_time_based_otp">set_time_based_otp() (RPA.MFA.MFA method)</a>
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Configuration.set_val">set_val() (RPA.Database.Configuration method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.set_window_position">set_window_position() (RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.set_window_rect">set_window_rect (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.set_window_size">set_window_size() (RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.set_windows_backend">set_windows_backend() (RPA.Desktop.Windows.Windows method)</a>
 </li>
@@ -3854,15 +4342,21 @@
 </li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem">SharedItem (class in RPA.MSGraph)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.SHEET_INCLUDES">SHEET_INCLUDES (RPA.Smartsheet.Smartsheet attribute)</a>
+</li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsWorkbook.sheetnames">sheetnames (RPA.Excel.Files.XlsWorkbook property)</a>
 
       <ul>
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.sheetnames">(RPA.Excel.Files.XlsxWorkbook property)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.sheets">sheets (RPA.Smartsheet.Smartsheet property)</a>
+</li>
       <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.should_refresh_token">should_refresh_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.Images.show_region_in_image">show_region_in_image() (RPA.Images.Images method)</a>
+</li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.showing">showing (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.shutdown_jab">shutdown_jab() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
@@ -3876,6 +4370,8 @@
         <li><a href="libraries/tables/python.html#RPA.Tables.Table.size">(RPA.Tables.Table property)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.size">size() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/slack/python.html#RPA.Slack.Slack">Slack (class in RPA.Slack)</a>
 </li>
       <li><a href="libraries/slack/python.html#RPA.Slack.Slack.slack_message_using_webhook">slack_message_using_webhook() (RPA.Slack.Slack method)</a>
@@ -3884,13 +4380,27 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Speed.SLOW">SLOW (RPA.Desktop.Windows.Speed attribute)</a>
 </li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet">Smartsheet (class in RPA.Smartsheet)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetAuthenticationError">SmartsheetAuthenticationError</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetError">SmartsheetError</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetNoSheetSelectedError">SmartsheetNoSheetSelectedError</a>
+</li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.smtp_connection">smtp_connection() (in module RPA.Email.ImapSmtp)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.sock">sock (RPA.FTP.ImplicitFTP_TLS property)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.sort_by_column">sort_by_column() (RPA.Tables.Table method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.sort_list_of_dates">sort_list_of_dates() (RPA.Calendar.Calendar method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.sort_table_by_column">sort_table_by_column() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Speed">Speed (class in RPA.Desktop.Windows)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.ssl_version">ssl_version (RPA.FTP.ImplicitFTP_TLS attribute)</a>
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.start_configured_process">start_configured_process() (RPA.Robocorp.Process.Process method)</a>
 </li>
@@ -3918,11 +4428,21 @@
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.status_should_be">status_should_be() (RPA.HTTP.HTTP method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.switch_browser">switch_browser() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.storbinary">storbinary() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.storlines">storlines() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.strict_file_interactability">strict_file_interactability (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.SUPPORTED_BROWSERS">SUPPORTED_BROWSERS (RPA.Browser.Selenium.Selenium attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.switch_browser">switch_browser() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.switch_engine">switch_engine() (RPA.DocumentAI.DocumentAI.DocumentAI method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.switch_to_application">switch_to_application() (RPA.Desktop.Windows.Windows method)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.switch_window">switch_window() (RPA.Browser.Selenium.WindowKeywords method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3956,13 +4476,31 @@
 </li>
       <li><a href="libraries/mfa/python.html#RPA.MFA.OTPMode.TIME">TIME (RPA.MFA.OTPMode attribute)</a>
 </li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.time_difference">time_difference() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.time_difference_between_timezones">time_difference_between_timezones() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.time_difference_in_days">time_difference_in_days() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.time_difference_in_hours">time_difference_in_hours() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.time_difference_in_minutes">time_difference_in_minutes() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.time_difference_in_months">time_difference_in_months() (RPA.Calendar.Calendar method)</a>
+</li>
+      <li><a href="libraries/calendar/python.html#RPA.Calendar.Calendar.time_now">time_now() (RPA.Calendar.Calendar method)</a>
+</li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.TimeoutException">TimeoutException</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.title_should_be">title_should_be() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.timeouts">timeouts (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.title_should_be">title_should_be() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.to_action">to_action() (in module RPA.Email.ImapSmtp)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.to_attachment_position">to_attachment_position() (in module RPA.Email.ImapSmtp)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.to_capabilities">to_capabilities() (RPA.Browser.Selenium.FirefoxOptions method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.to_condition">to_condition() (in module RPA.Tables)</a>
 </li>
@@ -3980,16 +4518,18 @@
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.to_image">to_image() (in module RPA.Images)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.to_json">to_json() (RPA.HTTP.HTTP method)</a>
 </li>
-      <li><a href="libraries/tables/python.html#RPA.Tables.to_list">to_list() (in module RPA.Tables)</a>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.to_list">to_list() (in module RPA.Email.ImapSmtp)</a>
 
       <ul>
+        <li><a href="libraries/tables/python.html#RPA.Tables.to_list">(in module RPA.Tables)</a>
+</li>
         <li><a href="libraries/tables/python.html#RPA.Tables.Table.to_list">(RPA.Tables.Table method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.TO_PROTECT">TO_PROTECT (RPA.Email.Exchange.Exchange attribute)</a>
 
       <ul>
@@ -4028,9 +4568,13 @@
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.touch_file">touch_file() (RPA.FileSystem.FileSystem method)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.transfercmd">transfercmd() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.trim_column_names">trim_column_names() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.trim_empty_rows">trim_empty_rows() (RPA.Tables.Tables method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.trust_server_pasv_ipv4_address">trust_server_pasv_ipv4_address (RPA.FTP.ImplicitFTP_TLS attribute)</a>
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Tweet">Tweet (class in RPA.Twitter)</a>
 </li>
@@ -4060,6 +4604,8 @@
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.unfollow">unfollow() (RPA.Twitter.Twitter method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.FirefoxOptions.unhandled_prompt_behavior">unhandled_prompt_behavior (RPA.Browser.Selenium.FirefoxOptions attribute)</a>
+</li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.unhide_columns">unhide_columns() (RPA.Excel.Files.Files method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.uniq">uniq() (in module RPA.Tables)</a>
@@ -4070,7 +4616,11 @@
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.unlike">unlike() (RPA.Twitter.Twitter method)</a>
 </li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.RobocorpElementFinder.unregister">unregister() (RPA.Browser.Selenium.RobocorpElementFinder method)</a>
+</li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.unselect_checkbox">unselect_checkbox() (RPA.SAP.SAP method)</a>
+</li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.unselect_current_sheet">unselect_current_sheet() (RPA.Smartsheet.Smartsheet method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.BatchMode.UPDATE">UPDATE (RPA.Hubspot.BatchMode attribute)</a>
 </li>
@@ -4079,15 +4629,17 @@
       <ul>
         <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.update">(RPA.MSGraph.SharedItem method)</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.update">(RPA.Robocorp.Vault.Secret method)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Secret.update">(RPA.Robocorp.Vault.Secret method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.update">[1]</a>
 </li>
       </ul></li>
+      <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.Smartsheet.update_column">update_column() (RPA.Smartsheet.Smartsheet method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.update_object">update_object() (RPA.Hubspot.Hubspot method)</a>
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.update_or_create">update_or_create() (RPA.JSON.RPAFilter method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.update_salesforce_object">update_salesforce_object() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.update_session">update_session() (RPA.HTTP.HTTP method)</a>
@@ -4136,15 +4688,17 @@
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.ExtendedFilter.values">values (RPA.Hubspot.ExtendedFilter property)</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.values">values() (RPA.Robocorp.Vault.Secret method)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Secret.values">values() (RPA.Robocorp.Vault.Secret method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.values">[1]</a>
 </li>
-      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault">Vault (class in RPA.Robocorp.Vault)</a>
+      <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.Vault">Vault (class in RPA.Robocorp.Vault)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault">[1]</a>
+</li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.visible">visible (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.visible">visible (RPA.JavaAccessBridge.JavaElement attribute)</a>
-</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.visible_children">visible_children (RPA.JavaAccessBridge.JavaElement attribute)</a>
+</li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.visible_children_count">visible_children_count (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceComputerVision.vision_analyze">vision_analyze() (RPA.Cloud.Azure.ServiceComputerVision method)</a>
 </li>
@@ -4153,6 +4707,10 @@
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceComputerVision.vision_detect_objects">vision_detect_objects() (RPA.Cloud.Azure.ServiceComputerVision method)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceComputerVision.vision_ocr">vision_ocr() (RPA.Cloud.Azure.ServiceComputerVision method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.voidcmd">voidcmd() (RPA.FTP.ImplicitFTP_TLS method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.voidresp">voidresp() (RPA.FTP.ImplicitFTP_TLS method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -4171,10 +4729,10 @@
       <ul>
         <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.wait_for_message">(RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
-        <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.wait_for_message">(RPA.Outlook.Application.Application method)</a>
-</li>
       </ul></li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.wait_until_created">wait_until_created() (RPA.FileSystem.FileSystem method)</a>
+</li>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.wait_until_element_exists">wait_until_element_exists() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.wait_until_element_is_focused">wait_until_element_is_focused() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
@@ -4186,9 +4744,17 @@
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.wait_until_removed">wait_until_removed() (RPA.FileSystem.FileSystem method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.warn">warn() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywords.warn">warn() (RPA.Browser.Selenium.BrowserManagementKeywords method)</a>
+
+      <ul>
+        <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords.warn">(RPA.Browser.Selenium.WindowKeywords method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.ImplicitFTP_TLS.welcome">welcome (RPA.FTP.ImplicitFTP_TLS attribute)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.width">width (RPA.JavaAccessBridge.JavaElement attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.WindowKeywords">WindowKeywords (class in RPA.Browser.Selenium)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows">Windows (class in RPA.Desktop.Windows)</a>
 
@@ -4208,8 +4774,6 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.MenuItemNotFoundError.with_traceback">(RPA.Desktop.Windows.MenuItemNotFoundError method)</a>
 </li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.UnknownWindowsBackendError.with_traceback">(RPA.Desktop.Windows.UnknownWindowsBackendError method)</a>
-</li>
-        <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.NoRecipientsError.with_traceback">(RPA.Email.Exchange.NoRecipientsError method)</a>
 </li>
         <li><a href="libraries/filesystem/python.html#RPA.FileSystem.TimeoutException.with_traceback">(RPA.FileSystem.TimeoutException method)</a>
 </li>
@@ -4251,7 +4815,7 @@
 </li>
         <li><a href="libraries/netsuite/python.html#RPA.Netsuite.NetsuiteAuthenticationError.with_traceback">(RPA.Netsuite.NetsuiteAuthenticationError method)</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError.with_traceback">(RPA.Robocorp.Vault.RobocorpVaultError method)</a>
+        <li><a href="libraries/robocorp_storage/python.html#RPA.Robocorp.Vault.RobocorpVaultError.with_traceback">(RPA.Robocorp.Vault.RobocorpVaultError method)</a>, <a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError.with_traceback">[1]</a>
 </li>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.EmptyQueue.with_traceback">(RPA.Robocorp.WorkItems.EmptyQueue method)</a>
 </li>
@@ -4260,6 +4824,12 @@
         <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDataNotAnDictionary.with_traceback">(RPA.Salesforce.SalesforceDataNotAnDictionary method)</a>
 </li>
         <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDomainChangeError.with_traceback">(RPA.Salesforce.SalesforceDomainChangeError method)</a>
+</li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetAuthenticationError.with_traceback">(RPA.Smartsheet.SmartsheetAuthenticationError method)</a>
+</li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetError.with_traceback">(RPA.Smartsheet.SmartsheetError method)</a>
+</li>
+        <li><a href="libraries/smartsheet/python.html#RPA.Smartsheet.SmartsheetNoSheetSelectedError.with_traceback">(RPA.Smartsheet.SmartsheetNoSheetSelectedError method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -4349,7 +4919,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

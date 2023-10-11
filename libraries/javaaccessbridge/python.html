@@ -48,11 +48,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +65,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
@@ -99,12 +105,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
@@ -132,7 +140,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">JavaAccessBridge</a></li>
       <li class="breadcrumb-item active">Python API</li>
       <li class="wy-breadcrumbs-aside">
@@ -195,10 +203,13 @@ set self.__traceback__ to tb and return self.</p>
 <p>The library utilizes <a class="reference external" href="https://github.com/robocorp/java-access-bridge-wrapper">java-access-bridge-wrapper</a> package to interact with
 Java UI. Currently only the 64-bit Windows OS is supported.</p>
 <p><strong>Inspecting elements</strong></p>
-<p>The recommended tool for inspecting Java application is:</p>
-<blockquote>
-<div><p>Google’s <a class="reference external" href="https://github.com/google/access-bridge-explorer">Access Bridge Explorer</a></p>
-</div></blockquote>
+<p>We have built an <a class="reference external" href="https://github.com/robocorp/working-with-java">Assistant</a> for working with Java application’s element structure and <a class="reference external" href="https://robocorp.com/docs/development-guide/locators#java-locators">Java locators</a>.
+The Assistant provides copy pasteable locators for each element and also allows testing locators against
+selected application.</p>
+<p>If our tools fail to pick the locator from your target application, there is always the
+<a class="reference external" href="https://github.com/google/access-bridge-explorer">Access Bridge Explorer</a> from Google that enables you to see the raw view. Please note that
+Access Bridge Explorer repository has been archived on July 27, 2022 and is no longer actively
+maintained.</p>
 <p>The <a class="reference external" href="https://accessibilityinsights.io/en/downloads/">Accessibility Insights for Windows</a> can show element properties if application framework
 supports Windows UI Automation (UIA), see more at <a class="reference external" href="https://accessibilityinsights.io/docs/en/windows/reference/faq/#can-i-use-accessibility-insights-for-windows-on-a-windows-app-written-with-java">using Accessibility Insights</a>. Then recommended
 library would be <a class="reference external" href="https://robocorp.com/docs/libraries/rpa-framework/rpa-windows">RPA.Windows</a> library.</p>
@@ -219,7 +230,7 @@ It is also possible to give DLL location as library initialization parameter <ci
 </div>
 </div></blockquote>
 <p><strong>About Java wrapper callbacks and actions</strong></p>
-<p>There might be a compability issue with callbacks and actions on target Java application. Possible reasons:</p>
+<p>There might be a compatibility issue with callbacks and actions on target Java application. Possible reasons:</p>
 <ul class="simple">
 <li><p>target application is executed with 32-bit Java</p></li>
 <li><p>target application does not support callbacks and/or actions</p></li>
@@ -227,17 +238,20 @@ It is also possible to give DLL location as library initialization parameter <ci
 <p>Workaround for this situation is to initialize <cite>JavaAccessBridge</cite> library with parameter <cite>ignore_callbacks=True</cite>.
 Then application’s element information is still accessible and any actions on those elements can be performed
 with <cite>RPA.Desktop</cite> library.</p>
-<p><em>Note.</em> There are still keywords, for example. <cite>Call Element Action</cite>, which will cause error if used in this situation.
-To be fixed in future release.</p>
+<p><em>Note.</em> There are still keywords, for example. <code class="docutils literal notranslate"><span class="pre">Call</span> <span class="pre">Element</span> <span class="pre">Action</span></code>, which will cause error if used in this situation.</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
 <span class="kn">Library</span><span class="p">   </span><span class="nn">RPA.JavaAccessBridge</span><span class="p">   </span><span class="s">ignore_callbacks=True</span>
 </pre></div>
 </div>
+<p><strong>Controlling the Java window</strong></p>
+<p>Keyword for this purpose is <code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">Window</span></code>. Window selection is based on the <code class="docutils literal notranslate"><span class="pre">title</span></code> parameter, which can be given
+regular expressions to match the correct window. The keyword brings the window into focus and initially reads window’s
+element structure.</p>
 <p><strong>Locating elements</strong></p>
 <p>To automate actions on the Java application, the robot needs locations to various elements
-using a feature called <cite>locators</cite>. Locator describes properties of an element.</p>
+using a feature called <a class="reference external" href="https://robocorp.com/docs/development-guide/locators#java-locators">Java locators</a>. Locator describes properties of an element.</p>
 <p>At the moment library contains basic level support for locators.</p>
-<p>The common locator types are <cite>name</cite> and <cite>role</cite>.</p>
+<p>The common locator types are <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">role</span></code>.</p>
 <p>To identify element with more than one property <cite>and</cite> can be used, for example:</p>
 <blockquote>
 <div><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">role:push button and name:Clear</span>
@@ -414,15 +428,17 @@ click options</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.click_element">
-<span class="sig-name descname"><span class="pre">click_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ContextNode</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#RPA.JavaAccessBridge.JavaElement" title="RPA.JavaAccessBridge.JavaElement"><span class="pre">JavaElement</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.click_element" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">click_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ContextNode</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#RPA.JavaAccessBridge.JavaElement" title="RPA.JavaAccessBridge.JavaElement"><span class="pre">JavaElement</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">click_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'click'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.click_element" title="Permalink to this definition"></a></dt>
 <dd><p>Click element</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>target</strong> – element to click</p></li>
+<li><p><strong>locator</strong> – element to click</p></li>
 <li><p><strong>index</strong> – target element index if multiple are returned</p></li>
 <li><p><strong>action</strong> – call click action on element (default), or use coordinates</p></li>
 <li><p><strong>timeout</strong> – timeout in seconds to find element</p></li>
+<li><p><strong>click_type</strong> – default <cite>click</cite>, see <cite>RPA.Desktop</cite> for different
+click options</p></li>
 </ul>
 </dd>
 </dl>
@@ -519,6 +535,27 @@ False will be using startsWith matching on non-integer properties</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.get_locator_tree">
+<span class="sig-name descname"><span class="pre">get_locator_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.get_locator_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Return Java locator tree as list of objects.</p>
+<p>Mostly relevant object properties are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ancestry</p></li>
+<li><p>role</p></li>
+<li><p>name</p></li>
+<li><p>description</p></li>
+<li><p>indexInParent</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of objects</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.get_version_info">
 <span class="sig-name descname"><span class="pre">get_version_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.get_version_info" title="Permalink to this definition"></a></dt>
 <dd><p>Get Java Access Bridge version information</p>
@@ -536,6 +573,51 @@ False will be using startsWith matching on non-integer properties</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.list_java_windows">
+<span class="sig-name descname"><span class="pre">list_java_windows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.list_java_windows" title="Permalink to this definition"></a></dt>
+<dd><p>List all available Java windows.</p>
+<p><cite>JavaWindow</cite> object contains following properties:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Java process id (pid)</p></li>
+<li><p>Java window title</p></li>
+<li><p>Java window handle (hwnd)</p></li>
+</ul>
+</div></blockquote>
+<p>The pid and title can be used to get control of the
+Java process by.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of <cite>JavaWindow</cite> objects</p>
+</dd>
+</dl>
+<p><strong>Python example.</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">window_list</span> <span class="o">=</span> <span class="n">java</span><span class="o">.</span><span class="n">list_java_windows</span><span class="p">()</span>
+<span class="c1"># By looping window list</span>
+<span class="k">for</span> <span class="n">window</span> <span class="ow">in</span> <span class="n">window_list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">window</span><span class="o">.</span><span class="n">title</span> <span class="o">==</span> <span class="s2">&quot;my java window title&quot;</span><span class="p">:</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Java window found&quot;</span><span class="p">)</span>
+        <span class="n">java</span><span class="o">.</span><span class="n">select_window_by_pid</span><span class="p">(</span><span class="n">window</span><span class="o">.</span><span class="n">pid</span><span class="p">)</span>
+<span class="c1"># Directly accessing</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">window_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">java</span><span class="o">.</span><span class="n">select_window_by_pid</span><span class="p">(</span><span class="n">window_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">pid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Robot Framework example.</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">@{window_list}=</span><span class="p">    </span><span class="c">List Java Windows</span>
+<span class="c">FOR</span><span class="p">    </span><span class="c">${window}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{window_list}</span>
+<span class="p">    </span><span class="c">IF</span><span class="p">    </span><span class="c">&quot;${window.title}&quot; == &quot;my java window title&quot;</span>
+<span class="p">        </span><span class="c">Select Window By PID</span><span class="p">    </span><span class="c">${window.pid}</span>
+<span class="p">    </span><span class="c">END</span>
+<span class="c">END</span>
+<span class="c">IF</span><span class="p">    </span><span class="c">len($window_list)==1</span>
+<span class="p">    </span><span class="c">Select Window By PID</span><span class="p">    </span><span class="c">${window_list[0].pid}</span>
+<span class="c">END</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -557,6 +639,24 @@ False will be using startsWith matching on non-integer properties</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>filename</strong> – filepath to save element tree</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>element tree</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.print_locator_tree">
+<span class="sig-name descname"><span class="pre">print_locator_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.print_locator_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Print current Java window locator list into log and possibly
+into a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> – filepath to save locator tree</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>locator tree</p>
 </dd>
 </dl>
 </dd></dl>
@@ -603,7 +703,40 @@ False will be using startsWith matching on non-integer properties</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.select_window">
 <span class="sig-name descname"><span class="pre">select_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bring_foreground</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.select_window" title="Permalink to this definition"></a></dt>
-<dd><p>Selects Java application window as target for the automation</p>
+<dd><p>Selects Java application window as target for the automation using
+Java window title.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – application window title</p></li>
+<li><p><strong>bring_foreground</strong> – if application is brought to foreground or not</p></li>
+<li><p><strong>timeout</strong> – selection timeout</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.select_window_by_pid">
+<span class="sig-name descname"><span class="pre">select_window_by_pid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bring_foreground</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.select_window_by_pid" title="Permalink to this definition"></a></dt>
+<dd><p>Selects Java application window as target for the automation using
+Java process ID (pid).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pid</strong> – application process id</p></li>
+<li><p><strong>bring_foreground</strong> – if application is brought to foreground or not</p></li>
+<li><p><strong>timeout</strong> – selection timeout</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.select_window_by_title">
+<span class="sig-name descname"><span class="pre">select_window_by_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bring_foreground</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.select_window_by_title" title="Permalink to this definition"></a></dt>
+<dd><p>Selects Java application window as target for the automation using
+Java window title.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -681,6 +814,24 @@ if False will use Desktop().press_keys()</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.wait_until_element_exists">
+<span class="sig-name descname"><span class="pre">wait_until_element_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.wait_until_element_exists" title="Permalink to this definition"></a></dt>
+<dd><p>Wait until element(s) matching the locator are found within
+given timeout or raises <code class="docutils literal notranslate"><span class="pre">ElementNotFound</span></code> exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>locator</strong> – locator to match element</p></li>
+<li><p><strong>timeout</strong> – timeout in seconds to find element</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>element(s) if found</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaAccessBridge.wait_until_element_is_focused">
 <span class="sig-name descname"><span class="pre">wait_until_element_is_focused</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">ContextNode</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#RPA.JavaAccessBridge.JavaElement" title="RPA.JavaAccessBridge.JavaElement"><span class="pre">JavaElement</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JavaAccessBridge.JavaAccessBridge.wait_until_element_is_focused" title="Permalink to this definition"></a></dt>
 <dd><p>Wait until element is focused</p>
@@ -735,6 +886,11 @@ if False will use Desktop().press_keys()</p></li>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Abstraction for Java object properties</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.ancestry">
+<span class="sig-name descname"><span class="pre">ancestry</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.ancestry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.checked">
 <span class="sig-name descname"><span class="pre">checked</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.checked" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
@@ -755,13 +911,28 @@ if False will use Desktop().press_keys()</p></li>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.enabled">
 <span class="sig-name descname"><span class="pre">enabled</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.enabled" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.focusable">
+<span class="sig-name descname"><span class="pre">focusable</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.focusable" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.height">
 <span class="sig-name descname"><span class="pre">height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.height" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.index_in_parent">
+<span class="sig-name descname"><span class="pre">index_in_parent</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.index_in_parent" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -787,6 +958,11 @@ if False will use Desktop().press_keys()</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.selected">
 <span class="sig-name descname"><span class="pre">selected</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.selected" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.showing">
+<span class="sig-name descname"><span class="pre">showing</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.showing" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -817,6 +993,11 @@ if False will use Desktop().press_keys()</p></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.visible_children">
 <span class="sig-name descname"><span class="pre">visible_children</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.visible_children" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.JavaAccessBridge.JavaElement.visible_children_count">
+<span class="sig-name descname"><span class="pre">visible_children_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#RPA.JavaAccessBridge.JavaElement.visible_children_count" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -907,7 +1088,7 @@ set self.__traceback__ to tb and return self.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

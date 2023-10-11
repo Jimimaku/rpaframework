@@ -48,11 +48,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +65,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
@@ -96,6 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
@@ -105,6 +112,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
@@ -132,7 +140,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Salesforce</a></li>
       <li class="breadcrumb-item active">Python API</li>
       <li class="wy-breadcrumbs-aside">
@@ -326,6 +334,60 @@ default None</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="RPA.Salesforce.Salesforce.auth_with_connected_app">
+<span class="sig-name descname"><span class="pre">auth_with_connected_app</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consumer_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">consumer_secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">embed_api_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.Salesforce.Salesforce.auth_with_connected_app" title="Permalink to this definition"></a></dt>
+<dd><p>Authorize to Salesforce with security token, username,
+password, connected app key, and connected app secret
+creating instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>username</strong> – Salesforce API username</p></li>
+<li><p><strong>password</strong> – Salesforce API password</p></li>
+<li><p><strong>api_token</strong> – Salesforce API security token</p></li>
+<li><p><strong>consumer_key</strong> – Salesforce connected app client ID</p></li>
+<li><p><strong>consumer_secret</strong> – Salesforce connected app client secret</p></li>
+<li><p><strong>embed_api_token</strong> – Embed API token to password (default: False)</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.Salesforce</span> <span class="kn">import</span> <span class="n">Salesforce</span>
+<span class="kn">from</span> <span class="nn">RPA.Robocorp.Vault</span> <span class="kn">import</span> <span class="n">Vault</span>
+
+<span class="n">SF</span> <span class="o">=</span> <span class="n">Salesforce</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="s2">&quot;robocorp-testing-stuff.develop.my&quot;</span><span class="p">)</span>
+<span class="n">VAULT</span> <span class="o">=</span> <span class="n">Vault</span><span class="p">()</span>
+
+<span class="n">secrets</span> <span class="o">=</span> <span class="n">VAULT</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="s2">&quot;salesforce&quot;</span><span class="p">)</span>
+<span class="n">SF</span><span class="o">.</span><span class="n">auth_with_connected_app</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;USERNAME&quot;</span><span class="p">],</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;PASSWORD&quot;</span><span class="p">],</span>
+    <span class="n">api_token</span><span class="o">=</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;API_TOKEN&quot;</span><span class="p">],</span>
+    <span class="n">consumer_key</span><span class="o">=</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;CONSUMER_KEY&quot;</span><span class="p">],</span>
+    <span class="n">consumer_secret</span><span class="o">=</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;CONSUMER_SECRET&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">  </span><span class="nn">RPA.Salesforce</span><span class="p">   </span><span class="s">domain=robocop-testing-stuff.develop.my</span>
+<span class="kn">Library</span><span class="p">  </span><span class="nn">RPA.Robocorp.Vault</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Authenticate to Salesforce using connected app</span>
+<span class="p">    ${</span><span class="nv">secrets</span><span class="p">}=  </span><span class="nf">Get Secret</span><span class="p">  </span><span class="s">salesforce</span>
+
+<span class="p">    </span><span class="nf">Auth with connected app</span>
+<span class="p">    ...  </span><span class="s">username=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">USERNAME</span><span class="p">]</span>
+<span class="p">    ...  </span><span class="s">password=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">PASSWORD</span><span class="p">]</span>
+<span class="p">    ...  </span><span class="s">api_token=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">API_TOKEN</span><span class="p">]</span>
+<span class="p">    ...  </span><span class="s">consumer_key=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">CONSUMER_KEY</span><span class="p">]</span>
+<span class="p">    ...  </span><span class="s">consumer_secret=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">CONSUMER_SECRET</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="RPA.Salesforce.Salesforce.auth_with_token">
 <span class="sig-name descname"><span class="pre">auth_with_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.Salesforce.Salesforce.auth_with_token" title="Permalink to this definition"></a></dt>
 <dd><p>Authorize to Salesforce with security token, username
@@ -410,6 +472,55 @@ defaults to “Closed Won”</p></li>
 <dd class="field-even"><p>object description as dictionary</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Salesforce.Salesforce.execute_apex">
+<span class="sig-name descname"><span class="pre">execute_apex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">apex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apex_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apex_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'POST'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Salesforce.Salesforce.execute_apex" title="Permalink to this definition"></a></dt>
+<dd><p>Execute APEX operation.</p>
+<p>The APEX classes can be added via Salesforce Developer console
+(from menu: File &gt; New &gt; Apex Class).</p>
+<p>Permissions for the APEX classes can be set via Salesforce Setup
+(Apex Classes -&gt; Security).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>apex</strong> – endpoint of the APEX operation</p></li>
+<li><p><strong>apex_data</strong> – data to be sent to the APEX operation</p></li>
+<li><p><strong>apex_method</strong> – operation method</p></li>
+<li><p><strong>kwargs</strong> – additional arguments to be passed to the APEX request</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>result of the APEX operation</p>
+</dd>
+</dl>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.Salesforce</span> <span class="kn">import</span> <span class="n">Salesforce</span>
+
+<span class="n">SF</span> <span class="o">=</span> <span class="n">Salesforce</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="s2">&quot;robocorp-testing-stuff.develop.my&quot;</span><span class="p">)</span>
+<span class="c1"># authenticate to Salesforce</span>
+<span class="n">SF</span><span class="o">.</span><span class="n">execute_apex</span><span class="p">(</span><span class="n">apex</span><span class="o">=</span><span class="s2">&quot;MyClass&quot;</span><span class="p">,</span> <span class="n">apex_data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">})</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">SF</span><span class="o">.</span><span class="n">execute_apex</span><span class="p">(</span>
+    <span class="n">apex</span><span class="o">=</span><span class="s2">&quot;getAccount/?id=0017R00002xmXB1QAM&quot;</span><span class="p">,</span>
+    <span class="n">apex_method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">  </span><span class="nn">RPA.Salesforce</span><span class="p">   </span><span class="s">domain=robocop-testing-stuff.develop.my</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Executing APEX operations</span>
+<span class="p">    </span><span class="c"># Authenticate to Salesforce</span>
+
+<span class="p">    &amp;{</span><span class="nv">apex_data</span><span class="p">}=  </span><span class="nf">Create Dictionary</span><span class="p">  </span><span class="s">data=value</span>
+<span class="p">    ${</span><span class="nv">result</span><span class="p">}=     </span><span class="nf">Execute APEX</span><span class="p">  </span><span class="s">MyClass</span><span class="p">  </span><span class="s">apex_data=</span><span class="p">${</span><span class="nv">apex_data</span><span class="p">}</span>
+<span class="p">    ${</span><span class="nv">result</span><span class="p">}=     </span><span class="nf">Execute APEX</span>
+<span class="p">    ...  </span><span class="s">apex=getAccount/?id=0017R00002xmXB1QAM</span>
+<span class="p">    ...  </span><span class="s">apex_method=GET</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
@@ -801,7 +912,7 @@ set self.__traceback__ to tb and return self.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -48,11 +48,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +65,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
@@ -99,12 +105,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
@@ -132,7 +140,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">HubSpot</a></li>
       <li class="breadcrumb-item active">Python API</li>
       <li class="wy-breadcrumbs-aside">
@@ -499,17 +507,17 @@ integer sent to the API must have 13 digits as of March 18, 2022).</p>
 <div class="section" id="batch-inputs">
 <span id="id1"></span><h3>Batch Inputs<a class="headerlink" href="#batch-inputs" title="Permalink to this heading"></a></h3>
 <p>When retrieving information, the library automatically batches requests
-that are provided as lists, see `Get object` keyword for an example,
+that are provided as lists, see <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">object</span></code> keyword for an example,
 but when wishing to create or update many objects, the library provides
 a batching system.</p>
-<p>In order to start a batch, you must first call the `Create new batch`
+<p>In order to start a batch, you must first call the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">batch</span></code>
 keyword. This initializes a new batch to accept inputs. If a batch
 already exists when you call this keyword, it will be lost and a new
 blank one will be started.</p>
 <p>Once the batch has been initialized, you can add inputs one at a time with
-`Add input to batch` or many at a time with `Extend batch with inputs`.</p>
+<code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">input</span> <span class="pre">to</span> <span class="pre">batch</span></code> or many at a time with <code class="docutils literal notranslate"><span class="pre">Extend</span> <span class="pre">batch</span> <span class="pre">with</span> <span class="pre">inputs</span></code>.</p>
 <p>In order to finally send the batch to HubSpot, you must call
-`Execute batch`. The final keyword will return the created or updated
+<code class="docutils literal notranslate"><span class="pre">Execute</span> <span class="pre">batch</span></code>. The final keyword will return the created or updated
 objects from HubSpot. New object IDs can be obtained from the <code class="docutils literal notranslate"><span class="pre">id</span></code>
 property, see the <a class="reference internal" href="#simplepublicobject">SimplePublicObject</a> reference.</p>
 <p><strong>Robot framework example:</strong></p>
@@ -1024,7 +1032,7 @@ current stage and index 1 is associated data.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="RPA.Hubspot.Hubspot.get_object">
-<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_property</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">associations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">SimplePublicObject</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">SimplePublicObjectWithAssociations</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">SimplePublicObject</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Hubspot.Hubspot.get_object" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_property</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">associations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">SimplePublicObject</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">SimplePublicObjectWithAssociations</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">SimplePublicObject</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Hubspot.Hubspot.get_object" title="Permalink to this definition"></a></dt>
 <dd><p>Reads objects of <code class="docutils literal notranslate"><span class="pre">object_type</span></code> from HubSpot with the
 provided <code class="docutils literal notranslate"><span class="pre">object_id</span></code>. The objects can be found using an
 alternate ID by providing the name of that HubSpot property
@@ -1072,7 +1080,7 @@ as an owner of another HubSpot object, such as a contact or company.
 You may provide the identifier as <code class="docutils literal notranslate"><span class="pre">owner_id</span></code>, <code class="docutils literal notranslate"><span class="pre">owner_email</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">user_id</span></code>. The <code class="docutils literal notranslate"><span class="pre">owner_id</span></code> will correspond to fields from the
 CRM API while the <code class="docutils literal notranslate"><span class="pre">user_id</span></code> will correspond to the user
-provisioning API (see keyword `Get User`).</p>
+provisioning API (see keyword <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">User</span></code>).</p>
 <p>The owner object has the following attributes (accessible via
 dot notation):</p>
 <p>If more than one of these IDs are provided, the keyword prefers
@@ -1097,7 +1105,7 @@ the <code class="docutils literal notranslate"><span class="pre">owner_id</span>
 <dd><p>Looks up the owner of a given Hubspot object, the provided object
 should be from this library or it should be a dictionary with an
 <code class="docutils literal notranslate"><span class="pre">hubspot_owner_id</span></code> key. If the object has no owner, this keyword
-returns None. See keyword `Get owner by ID` for information about
+returns None. See keyword <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">owner</span> <span class="pre">by</span> <span class="pre">ID</span></code> for information about
 the returned object.</p>
 <p>You can use an alternate property as the owner ID property by providing
 it with argument <code class="docutils literal notranslate"><span class="pre">owner_property</span></code>. If that property does not exist
@@ -1106,7 +1114,7 @@ this keyword will try the default <code class="docutils literal notranslate"><sp
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>object</strong> – A HubSpot object, best if the object was obtained
-via another keyword such as `Get owner by ID`</p></li>
+via another keyword such as <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">owner</span> <span class="pre">by</span> <span class="pre">ID</span></code></p></li>
 <li><p><strong>owner_property</strong> – An alternate property of the provided
 object to use as the field containing the Owner to be looked up.</p></li>
 </ul>
@@ -1301,7 +1309,7 @@ associated with the provided <code class="docutils literal notranslate"><span cl
 
 <dl class="py method">
 <dt class="sig sig-object py" id="RPA.Hubspot.Hubspot.search_for_objects">
-<span class="sig-name descname"><span class="pre">search_for_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">natural_search</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">SimplePublicObject</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Hubspot.Hubspot.search_for_objects" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">search_for_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">natural_search</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">string_query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">SimplePublicObject</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Hubspot.Hubspot.search_for_objects" title="Permalink to this definition"></a></dt>
 <dd><p>Returns a list of objects of the specified <code class="docutils literal notranslate"><span class="pre">type</span></code> based on the
 provided <code class="docutils literal notranslate"><span class="pre">search</span></code> criteria. The following types are supported:</p>
 <ul class="simple">
@@ -1536,7 +1544,7 @@ input API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>batch_input</strong> – A batch object such as one returned from
-the `Get current batch` keyword.</p>
+the <code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">current</span> <span class="pre">batch</span></code> keyword.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1632,7 +1640,7 @@ object. Read-only or nonexistent properties will be ignored.</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

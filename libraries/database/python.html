@@ -48,11 +48,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> RPA Framework
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +65,11 @@
               <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
@@ -99,12 +105,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
@@ -132,7 +140,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">Database</a></li>
       <li class="breadcrumb-item active">Python API</li>
       <li class="wy-breadcrumbs-aside">
@@ -195,6 +203,17 @@ and class init</p>
 <p>All database operations are supported. Keywords <cite>Query</cite> and <cite>Get Rows</cite>
 return values by default in <cite>RPA.Table</cite> format.</p>
 <p>Library is compatible with any Database API Specification 2.0 module.</p>
+<p><strong>Workaround for inserting large JSON data for Call Stored Procedure</strong></p>
+<p>Workaround is to use instead <cite>Query</cite> keyword. At the moment there is
+no known fix for the <cite>Call Stored Procedure</cite> keyword as it fails if
+JSON string is more than 8000 characters long.</p>
+<p><strong>Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${data}=</span><span class="p">    </span><span class="c">Load JSON from file</span><span class="p">    </span><span class="c">random_data.json</span>
+<span class="c">${json}=</span><span class="p">    </span><span class="c">Convert JSON to String</span><span class="p">    </span><span class="c">${data}</span>
+<span class="c"># Single quotes around ${json} string are necessary</span>
+<span class="c">Query</span><span class="p">    </span><span class="c">exec InsertJsonDataToSampleTable &#39;${json}&#39;</span>
+</pre></div>
+</div>
 <p>References:</p>
 <ul class="simple">
 <li><p>Database API Specification 2.0 - <a class="reference external" href="http://www.python.org/dev/peps/pep-0249/">http://www.python.org/dev/peps/pep-0249/</a></p></li>
@@ -246,7 +265,7 @@ return values by default in <cite>RPA.Table</cite> format.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="RPA.Database.Database.call_stored_procedure">
-<span class="sig-name descname"><span class="pre">call_stored_procedure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sanstran</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Database.Database.call_stored_procedure" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">call_stored_procedure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sanstran</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiple</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../tables/python.html#RPA.Tables.Table" title="RPA.Tables.Table"><span class="pre">Table</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Database.Database.call_stored_procedure" title="Permalink to this definition"></a></dt>
 <dd><p>Call stored procedure with name and params.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -255,6 +274,10 @@ return values by default in <cite>RPA.Table</cite> format.</p>
 <li><p><strong>params</strong> – parameters for the procedure as a list, defaults to None</p></li>
 <li><p><strong>sanstran</strong> – Run the query without an implicit transaction commit or
 rollback if such additional action was detected. (turned off by default)</p></li>
+<li><p><strong>as_table</strong> – If the result should be an instance of <cite>Table</cite>, otherwise a
+<cite>list</cite> will be returned. (defaults to <cite>True</cite>)</p></li>
+<li><p><strong>multiple</strong> – Return results for one result set (default <cite>False</cite>) or multiple
+results from all result sets (set this parameter to <cite>True</cite>)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -303,7 +326,7 @@ parameters are:</p>
 <li><p><strong>port</strong> – SQL server port</p></li>
 <li><p><strong>charset</strong> – for example, “utf-8”, defaults to None</p></li>
 <li><p><strong>config_file</strong> – location of configuration file, defaults to “db.cfg”</p></li>
-<li><p><strong>autocommit</strong> – set autocommit value for connect (only with pymssql atm)</p></li>
+<li><p><strong>autocommit</strong> – set autocommit value for connect</p></li>
 </ul>
 </dd>
 </dl>
@@ -425,8 +448,11 @@ means that all columns are returned</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="RPA.Database.Database.query">
-<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assertion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sanstran</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../tables/python.html#RPA.Tables.Table" title="RPA.Tables.Table"><span class="pre">Table</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Database.Database.query" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assertion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sanstran</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../tables/python.html#RPA.Tables.Table" title="RPA.Tables.Table"><span class="pre">Table</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Database.Database.query" title="Permalink to this definition"></a></dt>
 <dd><p>Execute a SQL query and optionally return the execution result.</p>
+<p>Security Warning: In order to safely include untrusted data in SQL queries
+it is advisable to use parameterized queries. For more information about
+formatting for specific databases, please see <a class="reference external" href="https://bobby-tables.com/python">https://bobby-tables.com/python</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -442,6 +468,7 @@ queries and <em>rollback</em> on failing ones automatically)</p></li>
 <li><p><strong>returning</strong> – Set this to <cite>True</cite> if you want to have rows explicitly
 returned (instead of the query result), <cite>False</cite> otherwise. (by default a
 heuristic detects if it should return or not)</p></li>
+<li><p><strong>data</strong> – The data to use if the SQL statement is parameterized</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -464,6 +491,10 @@ that the statement should return (raw rows or as <cite>Table</cite> if <cite>as_
 <span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Select * FROM table</span><span class="p">   </span><span class="s">row_count &gt; </span><span class="p">${</span><span class="nv">EXPECTED</span><span class="p">}</span>
 <span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Select * FROM table</span><span class="p">   </span><span class="s">&#39;value&#39; in columns</span>
 <span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Select * FROM table</span><span class="p">   </span><span class="s">columns == [&#39;id&#39;, &#39;value&#39;]</span>
+<span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Select * FROM table WHERE value = ?</span><span class="p">  </span><span class="s">data=(&quot;</span><span class="p">${</span><span class="nv">d</span><span class="p">}</span><span class="s">&quot;, )</span>
+<span class="p">    </span><span class="c"># Calling Stored Procedure with Query keyword requires that parameter</span>
+<span class="p">    </span><span class="c"># &#39;returning&#39; is set to &#39;True&#39;</span>
+<span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Exec stored_procedure</span><span class="p">  </span><span class="s">returning=True</span>
 </pre></div>
 </div>
 <p><strong>Python</strong></p>
@@ -475,9 +506,14 @@ that the statement should return (raw rows or as <cite>Table</cite> if <cite>as_
     <span class="n">lib</span><span class="o">.</span><span class="n">connect_to_database</span><span class="p">(</span><span class="s2">&quot;sqlite3&quot;</span><span class="p">,</span> <span class="s2">&quot;sqlite.db&quot;</span><span class="p">)</span>
     <span class="n">lib</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;DROP TABLE IF EXISTS orders;&quot;</span><span class="p">)</span>
     <span class="n">lib</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE orders(id INTEGER PRIMARY KEY, name TEXT);&quot;</span><span class="p">)</span>
+    <span class="n">data1</span> <span class="o">=</span> <span class="s2">&quot;my-1st-order&quot;</span>
+    <span class="n">data2</span> <span class="o">=</span> <span class="s2">&quot;my-2nd-order&quot;</span>
+    <span class="n">lib</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+        <span class="s1">&#39;INSERT INTO orders(id, name) VALUES(1, ?), (2, ?);&#39;</span><span class="p">,</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">)</span>
+    <span class="p">)</span>
     <span class="n">rows</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
-        <span class="s1">&#39;INSERT INTO orders(id, name) VALUES(1, &quot;my-1st-order&quot;),&#39;</span>
-        <span class="s1">&#39;(2, &quot;my-2nd-order&quot;) RETURNING name;&#39;</span>
+        <span class="s1">&#39;SELECT * FROM orders&#39;</span>
     <span class="p">)</span>
     <span class="nb">print</span><span class="p">([</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">])</span>  <span class="c1"># [&#39;my-1st-order&#39;, &#39;my-2nd-order&#39;]</span>
 </pre></div>
@@ -549,7 +585,7 @@ that the statement should return (raw rows or as <cite>Table</cite> if <cite>as_
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020 Robocorp Technologies, Inc..</p>
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
