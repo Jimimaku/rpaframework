@@ -12,9 +12,233 @@ Latest versions
 `Upcoming release <https://github.com/robocorp/rpaframework/projects/3#column-16713994>`_
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 `Released <https://pypi.org/project/rpaframework/#history>`_
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+28.5.1 - 05 Apr 2024
+--------------------
+
+- Relax ``exchangelib`` version requirements to allow ``5.1.0`` and above.
+
+28.5.0 - 05 Apr 2024
+--------------------
+
+- Library **RPA.Email.Exchange**:
+
+  - Fix problem with email subfolder selection (:pr:`1182`).
+  - Add keywords ``Delete message`` and ``Forward message`` (:pr:`1179`).
+
+04 Apr 2024
+-----------
+
+- Package ``rpaframework-assistant`` **3.0.4** (:issue:`1178`): Replaces ``flet`` with ``robocorp-flet``.
+
+  The ``flet`` package had some released versions removed from the PyPI package index (speficically versions
+  we were depending on). This caused all new installations using ``rpaframework-assistant`` to fail.
+  We have now replaced the dependency with ``robocorp-flet`` which is a fork of the original package.
+
+03 Apr 2024
+-----------
+
+Security releases regarding dependency packages ``pillow``, ``cryptography`` and ``aiohttp``.
+
+- package ``rpaframework`` **28.4.2**
+- package ``rpaframework-aws`` **5.3.3**
+- package ``rpaframework-assistant`` **3.0.3**
+- package ``rpaframework-google`` **9.0.1**
+- package ``rpaframework-hubspot`` **1.0.1**
+- package ``rpaframework-openai`` **1.3.2**
+- package ``rpaframework-pdf`` **7.3.2**
+- package ``rpaframework-recognition`` **5.2.4**
+- package ``rpaframework-windows`` **7.5.1**
+
+.. note::
+  The ``dialogs`` package has been deprecated since 07 Apr 2023 and will be removed from
+  the repository during the next week as a maintenance chore.
+
+28.4.1 - 19 Mar 2024
+--------------------
+
+- Library **RPA.Excel.Application** (:issue:`1160`): Fix problem with ``Get Range`` using
+  active worksheet.
+
+28.4.0 - 14 Mar 2024
+--------------------
+
+- Library **RPA.Word.Application** (:pr:`1159`):
+
+  - Add keyword ``Select current paragraph`` for selecting the current paragraph.
+  - Add keyword ``Select paragraphs`` for selecting previous/next paragraphs.
+  - Add keyword ``Copy selection to clipboard`` for copying the selection to the clipboard.
+
+- Library **RPA.Excel.Application** (:pr:`1158`):
+
+  - Add keyword ``Remove hidden columns and rows`` from given range.
+  - Add keyword ``Merge range`` for merging cells in a range.
+  - Add keyword ``Unmerge range`` for unmerging cells in a range.
+
+- Library **RPA.Cloud.Google** (:pr:`1157`, ``rpaframework-google`` **9.0.0**):
+
+  - Fix problem with method intellisense in Python development environments.
+  - Add keyword ``Detect Tables`` for detecting table-like structures in spreadsheet's sheets.
+  - Add keyword ``Get Sheet Formulas``  for getting formulas from a sheet.
+  - Add keyword ``To A1 notation`` for converting column number to A1 notation.
+
+28.3.0 - 22 Feb 2024
+--------------------
+
+- Library **RPA.Excel.Application** (:pr:`1152`): Add keyword ``Write data to range`` for writing data to
+  range(s) in a spreadsheet. This will be significantly faster than using ``Write to cells`` keyword
+  for large data sets.
+- Library **RPA.Word.Application** (:pr:`1152`):
+
+  - Add keywords starting with ``Move_`` for positioning cursor position in a document.
+  - Add keyword ``Find text`` for finding text in a document.
+  - Add keyword ``Paste from clipboard`` for pasting text from clipboard to a current cursor position.
+  - Add keyword ``Get current line`` to get text from the current line.
+  - Add keyword ``Get number of lines`` to get number of lines in a current document.
+  - Refactor keyword ``Write text`` to take cursor positioning into consideration.
+
+28.2.0 - 02 Feb 2024
+--------------------
+
+- Library **RPA.Excel.Application** (:pr:`1149`):
+
+  - Add new keyword ``Create Pivot Field`` for creating pivot fields for the pivot table.
+  - Add new keyword ``Create Pivot Table`` for creating pivot tables in a spreadsheet.
+  - Add new keyword ``Create Table`` for creating a table in a spreadsheet.
+  - Add new keyword ``Find`` for finding a value in a range.
+  - Add new keyword ``Get Pivot Tables`` for getting pivot tables in a spreadsheet.
+  - Add new keyword ``Get Range`` for getting a range in a spreadsheet.
+  - Add new keyword ``List Tables`` for listing tables in a spreadsheet.
+
+- For all **RPA.*.Application** libraries (:pr:`1149`): Add new utility keyword for
+  Robot Framework syntax ``Set Object Property``
+
+- Security dependency fix given the bump of ``cryptography`` package to version **42.0.2**.
+  (:pr:`1149`)
+
+17 Jan 2024
+-----------
+
+- Library **RPA.Cloud.Google** (:pr:`1145`, ``rpaframework-google`` **8.2.0**):
+
+  - All ``init_`` keywords will return initialized ``service`` instance.
+  - Library level documentation refactoring. Authentication related examples are now
+    in their own markdown file.
+
+28.1.0 - 12 Jan 2024
+--------------------
+
+- Library **RPA.Outlook.Application** (:pr:`1144`): Add ``reply_to`` and ``check_names``
+  parameters for ``Send Email``.
+
+28.0.0 - 18 Dec 2023
+--------------------
+
+- Library **RPA.Browser.Selenium** (:pr:`1139`): Keyword ``Open Available Browser`` won't
+  anymore try to initialize webdrivers for browsers that are not installed in the system.
+- Library **RPA.Crypto** (:pr:`1140`): Fix `AES256` return types for keywords
+  ``Generate Key`` and ``Decrypt String`` (from bytes to string).
+- Library **RPA.Hubspot** (:issue:`1106`): Extract the ``RPA.Hubspot`` library out of the
+  main package and into its own package ``rpaframework-hubspot``. This is a breaking
+  change, please update your ``conda.yaml`` accordingly.
+
+27.7.0 - 21 Nov 2023
+--------------------
+
+- Update ``selenium`` package to the version **4.15.2**.
+- Library **RPA.Crypto** (:pr:`1128`): Add `AES256` encryption method support.
+- Library **RPA.Windows** (:pr:`1134`; ``rpaframework-windows`` **7.5.0**): Add keywords
+  ``Enable Process Listing`` and ``Disable Process Listing`` to enable/disable the listing
+  of processes in the ``List Windows`` keyword.
+
+27.6.0 - 15 Nov 2023
+--------------------
+
+- Library **RPA.Robocorp.Vault** (:pr:`1129`): Improve error message when trying to
+  connect to Control Room Vault without valid connection details.
+- Library **RPA.SAP** (:pr:`1130`): Add keywords for pressing F1 or F4 on textfield
+  and gridview elements. Thanks to `Enrico Franzelli <https://github.com/wisenrico>`_
+  for the contribution!
+- Relax `importlib-metadata` version requirement to allow `4.13.0` and above.
+
+27.5.3 - 10 Nov 2023
+--------------------
+
+- Library **RPA.Outlook.Application** (:pr:`1127`): Fix how keyword ``Move Emails`` works.
+  Read more from the pull request.
+
+27.5.2 - 06 Nov 2023
+--------------------
+
+- Library **RPA.Robocorp.Storage** (``robocorp-storage`` **1.0.2**): Fix keyword
+  ``List Assets`` for listing and returning correctly all the assets available in the
+  cloud.
+- Library **RPA.Assistant** (:pr:`1122`; ``rpaframework-assistant`` **3.0.2**): Show
+  files selected with ``Add File Input`` to make it easier for users to know it has
+  been used. Also shows a warning if the image path for ``Add Image`` is not valid or
+  if the file does not exist.
+
+.. note::
+  This version is compatible with ``robocorp`` **1.2.1**.
+
+27.5.1 - 01 Nov 2023
+--------------------
+
+- Library **RPA.Browser.Selenium** (:pr:`1123`; ``rpaframework-core`` **11.2.3**): Fix
+  "There is no such driver by url" error with Chrome/Chromium versions above **114**
+  attempting a `chromedriver` version resolution.
+- Library **RPA.Robocorp.WorkItems**: Fix dirty items logging and documentation nits.
+
+27.5.0 - 24 Oct 2023
+--------------------
+
+- Add `reply_to` parameter for ``Send Message`` keyword for **RPA.Email.Exchange**
+  and **RPA.Email.ImapSmtp** libraries.
+
+27.4.2 - 13 Oct 2023
+--------------------
+
+- `Application` classes from **RPA.*.Application** libraries can be further inherited
+  and extended without the need of adding a mandatory class-level docstring.
+- Library **RPA.Robocorp.WorkItems** won't get easily affected anymore by any issue
+  within the **RPA.Email.ImapSmtp** library.
+- Keyword ``Email To Document`` raises appropriately when the input value is of an
+  unexpected type.
+- Takes into use the latest ``robocorp-storage`` **1.0.1**, adding various fixes into
+  the **RPA.Robocorp.Storage** library.
+
+27.4.1 - 11 Oct 2023
+--------------------
+
+- Fix keyword ``Email To Document`` in library **RPA.Email.ImapSmtp** by restricting
+  the ``python-docx`` package version to the maximum working one.
+
+  .. warning::
+    This affected both this library and **RPA.Robocorp.WorkItems** due to a slipped
+    sub-dependency breaking change. We strongly suggest to upgrade to the latest
+    ``rpaframework`` in order to benefit from the fix, and if you're not ready for it
+    yet, pin in your `conda.yaml` ``python-docx==0.8.11`` for the time being.
+
+27.4.0 - 11 Oct 2023
+--------------------
+
+- Library **RPA.JavaAccessBridge** (:issue:`1060`; ``java-access-bridge-wrapper``
+  **1.1.0**):
+
+  - New library import parameter `max_depth` which limits the maximum level the search
+    will go when selecting a window and building the element tree. With
+    `disable_refresh` one can disable any implicit global refresh when this is set to
+    `False`.
+  - Add new keyword ``Refresh Element`` for explicitly refreshing elements. (useful
+    when callbacks are disabled and new data appears in the app)
+  - Enhance ``Read Table`` with `visible_only` parameter which controls what kind of
+    children (inner cells of the table) to return. The number of columns is correctly
+    detected and the table automatically refreshes when callbacks are disabled and the
+    global refresh is enabled.
+  - Bugfixes in the following keywords: ``Click Element``,
+    ``Set Display Scale Factor``, ``Get Element Actions``.
 
 27.3.1 - 10 Oct 2023
 --------------------
