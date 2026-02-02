@@ -2879,7 +2879,7 @@ requires-dist = [
     { name = "robotframework-seleniumlibrary", specifier = ">=6.7.1" },
     { name = "robotframework-seleniumtestability", specifier = ">=2.0.0" },
     { name = "rpaframework-core", specifier = ">=12.1.0" },
-    { name = "rpaframework-pdf", specifier = ">=10.0.1" },
+    { name = "rpaframework-pdf", specifier = ">=10.0.2" },
     { name = "rpaframework-windows", marker = "sys_platform == 'win32'", specifier = ">=10.0.2" },
     { name = "selenium", specifier = "==4.15.2" },
     { name = "simple-salesforce", specifier = ">=1.0.0" },
